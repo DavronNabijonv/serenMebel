@@ -1,0 +1,98 @@
+@import url(../../style/index.scss);
+
+.swipergrp {
+  background: #282828;
+  .ttl {
+    color: #fff;
+    font-family: "Inter";
+    font-size: 6vw;
+    text-align: center;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%; /* 78.4px */
+    letter-spacing: 1.12px;
+    padding: 7vw 0;
+  }
+  .swgrp {
+    width: 95%;
+    margin: auto;
+    padding: 7vw 0;
+    .mySwiper {
+      .swiper-button-prev {
+        margin: -10vw 0 0 0;
+        width: 7vw;
+        height: 7vw;
+        flex-shrink: 0;
+        color: #fff;
+        border-radius: 25px;
+        background: #cdcbcb;
+      }
+      .swiper-button-prev::after {
+        font-size: 4vw;
+        margin-right: 1vw;
+        color: antiquewhite;
+      }
+      .swiper-button-next {
+        margin: -10vw 0 0 0;
+        width: 7vw;
+        height: 7vw;
+        flex-shrink: 0;
+        color: #fff;
+        border-radius: 25px;
+        background: #cdcbcb;
+      }
+      .swiper-button-next::after {
+        font-size: 4vw;
+        color: antiquewhite;
+        margin-left: 1vw;
+      }
+      .swiper-pagination {
+        .swiper-pagination-bullet {
+          color: #cdcbcb;
+          background: #cdcbcb;
+          stroke: #5c5c5c;
+        }
+      }
+      .swiper-wrapper {
+        margin-bottom: 12vw;
+        .swiper-slide {
+          .grp {
+            margin-left: 12.5vw;
+            display: flex;
+            width: 70vw;
+            padding: 4vw 3vw;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.5vw;
+            border-radius: 1.4vw;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            svg {
+              width: 8vw;
+              height: 8vw;
+            }
+            .gttl {
+              color: #fff;
+              font-family: "Inter";
+              font-size: 4vw;
+              padding-bottom: 2.5vw;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 140%; /* 33.6px */
+              letter-spacing: 0.05vw;
+            }
+            .gtxt {
+              align-self: stretch;
+              color: rgba(255, 255, 255, 0.8);
+              font-family: "Inter";
+              font-size: 4vw;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 140%; /* 22.4px */
+              letter-spacing: 0.05vw;
+            }
+          }
+        }
+      }
+    }
+  }
+}

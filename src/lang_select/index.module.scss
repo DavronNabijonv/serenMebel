@@ -1,0 +1,44 @@
+@import url(../style/index.scss);
+
+.lang{
+    width: 4vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 1.8vw;
+    gap: 0.5vw;
+    margin-right: 1vw;
+    
+    p{
+        padding: 0.2vw;
+        background-color: grey;
+        border-radius: 0.5vw;
+        color: white;
+        text-transform: uppercase;
+        font-size: 1.1vw;
+        font-weight: 600;
+    }
+    .langchange{
+        display: none;
+        flex-direction: column;
+        gap: 0.5vw;
+        padding: 0.5vw;
+        background-color: rgb(188, 177, 177) ;
+        border-radius: 0.5vw;
+        button{
+            background: none;
+            color: rgb(62, 35, 35);
+            border: none;
+            font-size: 1vw;
+            font-weight: 700;
+            font-family: sans-serif;
+            text-align: start;
+        }
+    }
+}
+
+.lang:hover{
+    .langchange{
+        display: flex;
+    }
+}

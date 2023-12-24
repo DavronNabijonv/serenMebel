@@ -1,0 +1,77 @@
+@import url(../../../../style/index.scss);
+
+.malumot {
+  background: #282828;
+  padding: 8vw 0 8vw 0;
+  .ittl {
+    padding: 2vw 0 5vw;
+    color: #fff;
+    font-family: "Inter";
+    font-size: 2vw;
+    text-align: center;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%; /* 44.8px */
+    letter-spacing: 0.08vw;
+  }
+  .fgrp {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: auto;
+    gap: 1.5vw;
+    .grp {
+      display: flex;
+      width: 20vw;
+      padding: 1vw;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1vw;
+      border-radius: 1.5vw;
+      border: 0.02vw solid rgba(255, 255, 255, 0.5);
+      transition: transform 0.5s ease-out;
+      .txt {
+        color: rgba(255, 255, 255, 0.8);
+        font-family: "Inter";
+        font-size: 1vw;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%; /* 22.4px */
+        letter-spacing: 0.1vw;
+      }
+      svg {
+        width: 3.5vw;
+        height: 3.5vw;
+        flex-shrink: 0;
+      }
+    }
+    .grp:hover{
+      transform: scale(0.9);
+    }
+  }
+}
+
+
+@media(max-width:600px){
+    .malumot{
+        padding-top: 10vw;
+        .ittl{
+            font-size: 5vw;
+        }
+        .fgrp{
+            .grp{
+                width: 40vw;
+                padding: 2vw;
+                .txt{
+                    font-size: 3vw;
+                }
+                svg{
+                    width: 8vw;
+                    height: 8vw;
+                }
+            }
+        }
+    }
+}

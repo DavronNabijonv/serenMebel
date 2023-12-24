@@ -1,0 +1,111 @@
+@import url(../../style/index.scss);
+
+.swipergrp {
+  background: #282828;
+  .ttl {
+    color: #fff;
+    font-family: "Inter";
+    font-size: 6vw;
+    text-align: center;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%; /* 78.4px */
+    letter-spacing: 1.12px;
+    padding: 7vw 0;
+  }
+  .swgrp {
+    width: 90%;
+    margin: auto;
+    padding: 7vw 0;
+    .mySwiper {
+      .swiper-button-prev {
+        margin:-10vw 0 0 0;
+        width: 7vw;
+        height: 7vw;
+        flex-shrink: 0;
+        color: #fff;
+        border-radius: 25px;
+        background: #cdcbcb;
+      }
+      .swiper-button-prev::after {
+        font-size: 4vw;
+        margin-right: 1vw;
+        color: antiquewhite;
+      }
+      .swiper-button-next {
+        margin:-10vw 0 0 0;
+        width: 7vw;
+        height: 7vw;
+        flex-shrink: 0;
+        color: #fff;
+        border-radius: 25px;
+        background: #cdcbcb;
+      }
+      .swiper-button-next::after {
+        font-size: 4vw;
+        color: antiquewhite;
+        margin-left: 1vw;
+      }
+      .swiper-pagination{
+        .swiper-pagination-bullet{
+            color: #cdcbcb;
+            background: #cdcbcb;
+            stroke: #5c5c5c;
+        }
+      }
+      .swiper-wrapper {
+        margin-bottom: 10vw;
+        .swiper-slide {
+          .mgrp {
+            margin: 0 0 0 12.5vw;
+            display: flex;
+            width: 65vw;
+            height: 80vw;
+            padding: 3vw;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1.5vw;
+            border-radius: 1.5vw;
+            border: 0.02vw solid rgba(255, 255, 255, 0.5);
+            img {
+              width: 58.5vw;
+              border-radius: 1.5vw;
+            }
+            p {
+              color: #fff;
+              font-family: "Inter";
+              font-size: 5vw;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 140%;
+              letter-spacing: 0.08vw;
+            }
+            button {
+              display: flex;
+              padding: 2.3vw 17vw;
+              justify-content: center;
+              align-items: center;
+              gap: 1vw;
+              align-self: stretch;
+              color: #111;
+              font-family: "Inter";
+              font-size: 4vw;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 140%; /* 25.2px */
+              letter-spacing: 0.08vw;
+              border-radius: 0.8vw;
+              margin-top: 1vw;
+              background: linear-gradient(
+                140deg,
+                #5c5c5c 1.86%,
+                #cdcbcb 44.24%,
+                #5c5c5c 96.52%
+              );
+            }
+          }
+        }
+      }
+    }
+  }
+}

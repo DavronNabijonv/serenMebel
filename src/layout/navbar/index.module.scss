@@ -1,0 +1,126 @@
+@import url(../../style/index.scss);
+
+@keyframes example{
+  from{
+    opacity: 0;
+    margin-top: -100px;
+  }
+  to{
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  .changelang{
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .main {
+    background: #282828;
+    width: 100%;
+    padding: 1vw 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .responsive {
+      display: flex;
+      align-items: center;
+      .alone {
+        img {
+          width: 3.2vw;
+          height: 3.2vw;
+          flex-shrink: 0;
+          object-fit: cover;
+          mix-blend-mode: color-dodge;
+        }
+      }
+      .resp {
+        display: none;
+      }
+    }
+    .nvg {
+      display: flex;
+      align-items: center;
+      gap: 2.5vw;
+      a {
+        color: #fff;
+        font-family: "Inter", sans-serif;
+        font-size: 1.5vw;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 140%;
+        letter-spacing: 0.1vw;
+        text-transform: uppercase;
+        button {
+          display: flex;
+          padding: 0.8vw 2.1vw;
+          align-items: center;
+          border-radius: 10px;
+          background: linear-gradient(
+            140deg,
+            #5c5c5c 1.86%,
+            #cdcbcb 44.24%,
+            #5c5c5c 96.52%
+          );
+          color: #111;
+          font-family: "Inter", sans-serif;
+          font-size: 1.2vw;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 140%; /* 25.2px */
+          letter-spacing: 0.09vw;
+        }
+      }
+    }
+    .animated{
+      animation: example 5s linear ;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    .main {
+      padding: 20px 30px;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      .responsive {
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        .alone {
+          img {
+            width: 100px;
+            height: 30px;
+            flex-shrink: 0;
+          }
+        }
+        .resp {
+          display: flex;
+          width: 25px;
+          height: 25px;
+          color: #cdcbcb;
+        }
+      }
+      .nvg {
+        padding: 10px 0 0 0;
+        flex-direction: column;
+        align-items: flex-start;
+        display: none;
+        transition: display 1s ease-in;
+        a {
+          font-size: 18px;
+          button {
+            font-size: 17px;
+          }
+        }
+      }
+    }
+  }
+}

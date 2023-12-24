@@ -1,25 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+import { I18nextProvider } from "react-i18next";
+import MainPage from "./one_page";
+import i18n from "./i18";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <I18nextProvider i18n={i18n}>
+      <MainPage/>
+    </I18nextProvider>
+  )
 }
 
 export default App;

@@ -1,0 +1,39 @@
+@import url(../../style/index.scss);
+
+.asosiy{
+    .mySwiper{
+        height: 60vw;
+        .swiper-wrapper{
+            .swiper-slide{
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:768px){
+    .asosiy{
+        .mySwiper{
+            height: 100vw;
+            .swiper-wrapper{
+                .swiper-slide{
+                    img{
+                        margin-top: 9vw;
+                    }
+                }
+            }
+        }
+    }   
+}
+
+@media(max-width:425px){
+    .asosiy{
+        .mySwiper{
+            height: 150vw;
+        }
+    }   
+}

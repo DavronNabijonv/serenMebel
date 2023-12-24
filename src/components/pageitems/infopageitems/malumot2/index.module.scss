@@ -1,0 +1,218 @@
+@import url(../../../../style/index.scss);
+
+.malumot2 {
+  background: #282828;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  height: 50vw;
+  img {
+    width: 30vw;
+    height: 40vw;
+    margin: auto;
+    background: url(../../../../assets/images/ichi.png),
+      lightgray -155.508px -9.717px / 161.123% 107.744% no-repeat;
+    mix-blend-mode: lighten;
+  }
+  .grp {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    p {
+      color: #fff;
+      font-family: "Inter";
+      font-size: 1.2vw;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%; /* 28px */
+      letter-spacing: 0.09vw;
+      width: 18vw;
+      text-align: start;
+    }
+  }
+  .grp1 {
+    margin: -41vw 0 0 52vw;
+    svg {
+      width: 10vw;
+    }
+  }
+  .grp2 {
+    margin: -28.25vw 0 0 54.2vw;
+    svg {
+      width: 15vw;
+    }
+  }
+  .grp3 {
+    margin: -18.4vw 0 0 58vw;
+    svg {
+      width: 10vw;
+    }
+  }
+  .grp4 {
+    margin: -16vw 0 0 52.7vw;
+    svg {
+      width: 15vw;
+    }
+    p {
+      padding-top: 2vw;
+    }
+  }
+  .grp5 {
+    margin: -3vw 0 0 52vw;
+    svg {
+      width: 12vw;
+    }
+  }
+  .grp6 {
+    margin: -6vw 0 0 10vw;
+    svg {
+      width: 18vw;
+    }
+  }
+  .grp7 {
+    margin: -12.8vw 0 0 10vw;
+    svg {
+      width: 13vw;
+    }
+  }
+  .grp8 {
+    margin: -18.2vw 0 0 10vw;
+    svg {
+      width: 13vw;
+    }
+  }
+  .grp9 {
+    margin: -26.3vw 0 0 12.5vw;
+    svg {
+      width: 10vw;
+    }
+  }
+  .grp10 {
+    margin: -34.5vw 0 0 12vw;
+    svg {
+      width: 15vw;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .malumot2 {
+    height: 80vw;
+    img {
+      margin-top: 3vw;
+      width: 60vw;
+      height: 70vw;
+    }
+    .grp {
+      gap: 1vw;
+      p {
+        font-size: 2vw;
+        width: 28.09vw;
+      }
+      svg {
+        display: none;
+      }
+    }
+    .grp1 {
+      margin: -72.5vw 0 0 54vw;
+    }
+    .grp2 {
+      margin: -50.25vw 0 0 58.2vw;
+    }
+    .grp3 {
+      margin: -32.4vw 0 0 67vw;
+    }
+    .grp4 {
+      margin: -25vw 0 0 57.7vw;
+    }
+    .grp5 {
+      margin: -5.5vw 0 0 54vw;
+    }
+    .grp6 {
+      margin: -11vw 0 0 20vw;
+    }
+    .grp7 {
+      margin: -22.8vw 0 0 5vw;
+    }
+    .grp8 {
+      margin: -32.2vw 0 0 5vw;
+    }
+    .grp9 {
+      margin: -45.3vw 0 0 3.5vw;
+    }
+    .grp10 {
+      margin: -60.5vw 0 0 12vw;
+    }
+    .grp1::before {
+      content: "";
+      width: 2vw;
+      height: 2vw;
+      border-radius: 100%;
+      background-color: rgb(90, 93, 96);
+    }
+    .grp2::before {
+      content: "";
+      width: 2vw;
+      height: 2vw;
+      border-radius: 100%;
+      background-color: rgb(90, 93, 96);
+    }
+    .grp3::before {
+      content: "";
+      width: 2vw;
+      height: 2vw;
+      border-radius: 100%;
+      background-color: rgb(90, 93, 96);
+    }
+    .grp4::before {
+      content: "";
+      width: 2vw;
+      height: 2vw;
+      border-radius: 100%;
+      background-color: rgb(90, 93, 96);
+    }
+    .grp5::before {
+      content: "";
+      width: 2vw;
+      height: 2vw;
+      border-radius: 100%;
+      background-color: rgb(77, 78, 78);
+    }
+    .grp6::after {
+      content: "";
+      width: 2vw;
+      height: 2vw;
+      border-radius: 100%;
+      background-color: rgb(79, 79, 80);
+    }
+    .grp7::after {
+      content: "";
+      width: 2vw;
+      height: 2vw;
+      border-radius: 100%;
+      background-color: rgb(90, 93, 96);
+    }
+    .grp8::after {
+      content: "";
+      width: 2vw;
+      height: 2vw;
+      border-radius: 100%;
+      background-color: rgb(90, 93, 96);
+    }
+    .grp9::after {
+      content: "";
+      width: 2vw;
+      height: 2vw;
+      border-radius: 100%;
+      background-color: rgb(90, 93, 96);
+    }
+    .grp10::after {
+      content: "";
+      width: 2vw;
+      height: 2vw;
+      border-radius: 100%;
+      background-color: rgb(90, 93, 96);
+    }
+  }
+}

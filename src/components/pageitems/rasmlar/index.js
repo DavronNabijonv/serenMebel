@@ -8,6 +8,7 @@ import x5 from '../../../assets/images/m4.jpg'
 import x1 from '../../../assets/images/m5.jpg'
 import x4 from '../../../assets/images/m6.jpg'
 import x6 from '../../../assets/images/m7.jpg'
+import x8 from '../../../assets/images/m8.jpg'
 
 export default function Rasmlar() {
 
@@ -38,7 +39,7 @@ export default function Rasmlar() {
         <div className={innerWidth<600?styles.one:styles.grp1}>
           <img src={x5} className={styles.img} />
           <img src={x1} className={styles.img} />
-          <img src={x3} className={styles.img} />
+          <img src={x8} className={styles.img} />
         </div>
         <div className={innerWidth<600? styles.one :styles.grp1}>
           <img src={x2} className={styles.img} />

@@ -33,9 +33,7 @@ export default function MahsulotlarSwiper() {
               <div className="mgrp" key={r.id}>
                 <img src={r.img} alt={r.ttl} />
                 <p>{r.ttl}</p>
-                <NavLink to={`/info/${r.id}`}>
-                  <button>Подробное</button>
-                </NavLink>
+                <button>Подробное</button>
               </div>
             </SwiperSlide>
           ))}

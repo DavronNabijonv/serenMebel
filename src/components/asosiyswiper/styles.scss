@@ -2,13 +2,14 @@
 
 .asosiy{
     .mySwiper{
-        height: 60vw;
+        height: 50vw;
+        padding-top: 6vw;
         .swiper-wrapper{
             .swiper-slide{
                 img{
                     width: 100%;
                     height: 100%;
-                    object-fit: cover;
+                    border-radius: 0 0 0 0;
                 }
             }
         }
@@ -18,11 +19,18 @@
 @media(max-width:768px){
     .asosiy{
         .mySwiper{
-            height: 100vw;
+            height: 80vw;
+            padding-top: 1vw;
             .swiper-wrapper{
                 .swiper-slide{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                     img{
                         margin-top: 9vw;
+                        border-radius: 5vw;
+                        width: 88vw;
+                        height: 60vw;
                     }
                 }
             }
@@ -30,10 +38,27 @@
     }   
 }
 
+@media(max-width:550px){
+    .asosiy{
+        .mySwiper{
+            height: 100vw;
+            padding-top: 8vw;
+        }
+    }
+}
+
 @media(max-width:425px){
     .asosiy{
         .mySwiper{
-            height: 150vw;
+            height: 100vw;
         }
     }   
+}
+
+@media(max-width:350px){
+    .asosiy{
+        .mySwiper{
+            height: 120vw;
+        }
+    }
 }

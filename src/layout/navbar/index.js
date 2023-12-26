@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "./index.module.scss";
 import { LuMenuSquare } from "react-icons/lu";
-import logo from '../../assets/images/logo.jpg'
+import logo from "../../assets/images/logo2.png";
 import { useTranslation } from "react-i18next";
 import ChangeLanguage from "../../lang_select";
 
@@ -18,15 +18,18 @@ export default function Navbar(props) {
       <div className={styles.main}>
         <div className={styles.responsive}>
           <a href={props.asosiy} className={styles.alone}>
-            <img src={logo} /> 
+            <img src={logo} />
+            SerenMebel
           </a>
           <LuMenuSquare
             className={styles.resp}
             onClick={() => {
               setToggle(!toggle);
             }}
-
           />
+          <div className={styles.changelang}>
+            <ChangeLanguage />
+          </div>
         </div>
         <div className={styles.nvg} style={toggle ? { display: "flex" } : {}}>
           <a
@@ -62,9 +65,6 @@ export default function Navbar(props) {
             <button>{t("contact")}</button>
           </a>
         </div>
-      </div>
-      <div className={styles.changelang}>
-        <ChangeLanguage />
       </div>
       <div
         className={styles.overlay}

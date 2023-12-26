@@ -1,5 +1,14 @@
 @import url(../../style/index.scss);
 
+@keyframes ay {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+
 .footer {
   background: rgba(56, 56, 56, 0.9);
   display: flex;
@@ -18,8 +27,11 @@
     width: 100%;
     a {
       img {
-        width: 10vw;
-        height: 3vw;
+        animation: ay 2s alternate-reverse infinite;
+        width: 4vw;
+        height: 4vw;
+        scale: 1.5;
+        object-fit: cover;
       }
     }
     .ancorgrp {
@@ -43,15 +55,15 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    .netgrp{
-        display: flex;
-        align-items: center;
-        gap: 1.3vw;
-        svg{
-            width: 1.5vw;
-            height: 1.5vw;
-            color:#CDCBCB;
-        }
+    .netgrp {
+      display: flex;
+      align-items: center;
+      gap: 1.3vw;
+      svg {
+        width: 1.5vw;
+        height: 1.5vw;
+        color: #cdcbcb;
+      }
     }
     p {
       color: rgba(255, 255, 255, 0.8);
@@ -64,60 +76,59 @@
   }
 }
 
-
-@media(max-width:768px){
-    .footer{
-        padding: 20px 35px;
-        gap: 20px;
-        .f1{
-         a{
-            img{
-                width: 110px;
-                height: 35px;
-            }
-         }   
-         .ancorgrp{
-            a{
-                font-size: 16px;
-            }
-         }
+@media (max-width: 768px) {
+  .footer {
+    padding: 20px 35px;
+    gap: 20px;
+    .f1 {
+      a {
+        img {
+          width: 4vw;
+          height: 4vw;
         }
-        .f2{
-            .netgrp{
-                svg{
-                    width: 18px;
-                    height: 18px;
-                }
-            }
-            p{
-                font-size: 13px;
-            }
+      }
+      .ancorgrp {
+        a {
+          font-size: 16px;
         }
+      }
     }
+    .f2 {
+      .netgrp {
+        svg {
+          width: 18px;
+          height: 18px;
+        }
+      }
+      p {
+        font-size: 13px;
+      }
+    }
+  }
 }
 
-@media(max-width:470px){
-    .footer{
-        .f1{
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
-            a{
-                padding: 10px 0;
-            }
-            .ancorgrp{
-                justify-content: center;
-                flex-wrap: wrap;
-                gap: 15px;
-            }
-        }
-        .f2{
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
-            p{
-                text-align: center;
-            }
-        }
+@media (max-width: 470px) {
+  .footer {
+    .f1 {
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      a {
+        padding: 10px 0;
+      }
+      .ancorgrp {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+      }
     }
+    .f2 {
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      p {
+        text-align: center;
+      }
+    }
+  }
 }

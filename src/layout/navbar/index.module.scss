@@ -1,13 +1,22 @@
 @import url(../../style/index.scss);
 
-@keyframes example{
-  from{
+@keyframes example {
+  from {
     opacity: 0;
     margin-top: -100px;
   }
-  to{
+  to {
     opacity: 1;
     margin-top: 0;
+  }
+}
+
+@keyframes ay {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
   }
 }
 
@@ -15,28 +24,44 @@
   position: fixed;
   width: 100%;
   z-index: 999;
-  .changelang{
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
+  animation: animate__backInUp 2s forwards;
   .main {
     background: #282828;
     width: 100%;
-    padding: 1vw 5vw;
+    padding: 1.8vw 5vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
     .responsive {
       display: flex;
       align-items: center;
+      .changelang {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-top: 1vw;
+      }
       .alone {
+        display: flex;
+        letter-spacing: 2vw;
+        align-items: center;
+        justify-content: center;
+        gap: 2vw;
+        color: #f3de45;
+        font-family: "Inter", sans-serif;
+        font-size: 2vw;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 140%;
+        letter-spacing: 0.1vw;
+        text-transform: capitalize;
         img {
           width: 3.2vw;
           height: 3.2vw;
           flex-shrink: 0;
-          object-fit: cover;
+          scale: 2.5;
           mix-blend-mode: color-dodge;
+          animation: ay 7s infinite;
         }
       }
       .resp {
@@ -77,8 +102,8 @@
         }
       }
     }
-    .animated{
-      animation: example 5s linear ;
+    .animated {
+      animation: example 5s linear;
     }
   }
 }
@@ -86,7 +111,7 @@
 @media (max-width: 768px) {
   .navbar {
     .main {
-      padding: 20px 30px;
+      padding: 20px 70px;
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start;
@@ -94,10 +119,13 @@
         width: 100%;
         justify-content: space-between;
         align-items: center;
+        .changelang{
+          margin-right: 2vw;
+        }
         .alone {
           img {
-            width: 100px;
-            height: 30px;
+            width: 3.2vw;
+            height: 3.2vw;
             flex-shrink: 0;
           }
         }

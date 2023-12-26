@@ -7,10 +7,9 @@
     flex-direction: column;
     padding-top: 1.8vw;
     gap: 0.5vw;
-    margin-right: 1vw;
-    
+    margin: 0 0 0 2vw ;
     p{
-        padding: 0.2vw;
+        padding: 0.28vw;
         background-color: grey;
         border-radius: 0.5vw;
         color: white;
@@ -40,5 +39,14 @@
 .lang:hover{
     .langchange{
         display: flex;
+    }
+}
+
+@media(max-width:768px){
+    .lang{
+        margin-right: 0;
+        p{
+            font-size: 2vw;
+        }
     }
 }

@@ -74,6 +74,7 @@
       img:nth-child(1),
       img:nth-child(3) {
         height: 18vw;
+        object-fit: cover;
       }
       img:nth-child(2) {
         height: 25vw;
@@ -83,6 +84,7 @@
       img:nth-child(2),
       img:nth-child(3) {
         height: 18vw;
+        object-fit: cover;
       }
       img:nth-child(1) {
         height: 25vw;
@@ -109,7 +111,7 @@
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .rasm {
     button {
       display: flex;

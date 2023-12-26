@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './index.module.scss'
-import logo from '../../assets/images/logo.jpg'
+import logo from '../../assets/images/logo2.png'
 import { FaTelegramPlane } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
 import { IoLogoYoutube } from "react-icons/io5";

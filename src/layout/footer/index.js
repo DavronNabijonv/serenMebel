@@ -25,7 +25,7 @@ export default function Footer(props) {
                 <IoLogoYoutube/>
                 <RiFacebookFill/>
             </div>
-            <p>© Shamollift tashkiloti shamollift.uz</p>
+            <p>© SerenMebel tashkiloti serenmebel.uz</p>
         </div>
     </div>
   )

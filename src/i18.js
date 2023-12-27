@@ -35,7 +35,7 @@ i18n.use(initReactI18next).init({
     uz: {
       translation: {
         haqida: "Haqida",
-        mahsulot: "Mahslotlar",
+        mahsulot: "Mahsulotlar",
         xizmat: "Xizmatlar",
         contact: "Aloqa",
         p1: "Biz uchun lift sizni yuqoriga va pastga siljitadigan kvadrat quti emas, balki noyob mexanizmdir.Liftimizda chiqish har qanday yo'lovchi uchun mutlaqo noyob tajribadir.Asosiyda Liftning yaratilishi texnologiyaning eng yuqori darajasiga asoslanadi, buning natijasida lift haqidagi tasavvur butunlay oʻzgarib bormoqda.",

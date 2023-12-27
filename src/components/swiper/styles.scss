@@ -106,6 +106,13 @@
             }
           }
         }
+        .swiper-slide:nth-child(5){
+          .mgrp{
+            img{
+              object-fit: cover;
+            }
+          }
+        }
       }
     }
   }

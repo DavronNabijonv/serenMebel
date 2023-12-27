@@ -13,7 +13,9 @@ export default function Mahsulotlar() {
           <div className={styles.mgrp} key={r.id}>
             <img src={r.img} alt={r.ttl} />
             <p>{r.ttl}</p>
+            <NavLink to={r.path}>
               <button>Подробное</button>
+            </NavLink>
           </div>
         ))}
       </div>

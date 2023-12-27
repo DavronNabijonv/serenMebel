@@ -46,7 +46,7 @@
         letter-spacing: 2vw;
         align-items: center;
         justify-content: center;
-        gap: 2vw;
+        gap: 3vw;
         color: #f3de45;
         font-family: "Inter", sans-serif;
         font-size: 2vw;
@@ -111,7 +111,7 @@
 @media (max-width: 768px) {
   .navbar {
     .main {
-      padding: 20px 70px;
+      padding: 20px 15vw 20px 12vw;
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start;
@@ -123,10 +123,12 @@
           margin-right: 2vw;
         }
         .alone {
+          font-size: 2.5vw;
           img {
             width: 3.2vw;
             height: 3.2vw;
             flex-shrink: 0;
+            scale: 2.7;
           }
         }
         .resp {
@@ -146,6 +148,104 @@
           font-size: 18px;
           button {
             font-size: 17px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media(max-width:650px){
+  .navbar{
+    .main{
+      .responsive{
+        .changelang{
+          margin-top: 2vw;
+          scale: 1.3;
+        }
+        .alone{
+          font-size: 3vw;
+          gap: 4vw;
+          img{
+            scale: 3.2;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media(max-width:550px){
+  .navbar{
+    .main{
+      .responsive{
+        .changelang{
+         margin-top: 3.5vw;
+        }
+        .alone{
+          gap: 5vw;
+          font-size: 4vw;
+          img{
+            scale: 4.2;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media(max-width:420px){
+  .navbar{
+    .main{
+      .responsive{
+        .changelang{
+         margin-top: 4.5vw;
+         scale: 1.6;
+         padding-right: 3vw;
+        }
+        .alone{
+          gap: 6vw;
+          font-size: 5vw;
+          img{
+            scale: 5.2;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media(max-width:370px){
+  .navbar{
+    .main{
+      .responsive{
+        .changelang{
+         scale: 1.8;
+         margin-top: 5.5vw;
+        }
+        .alone{
+          gap: 7vw;
+          img{
+            scale: 5.8;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media(max-width:325px){
+  .navbar{
+    .main{
+      .responsive{
+        .changelang{
+          scale: 2.2;
+        }
+        .alone{
+          gap: 8vw;
+          font-size: 6vw;
+          img{
+            scale: 7;
           }
         }
       }

@@ -2,9 +2,13 @@ import React, { useEffect } from "react";
 import Navbar from "../../layout/navbar";
 import Footer from "../../layout/footer";
 import styles from './index.module.scss';
-import b1 from "../../assets/images/m5.jpg";
-import b2 from "../../assets/images/m4.jpg";
-
+import b1 from "../../assets/images/seren/oshxona/HI-TECH/316.jpg";
+import b2 from "../../assets/images/seren/oshxona/HI-TECH/13.jpg";
+import b3 from "../../assets/images/seren/oshxona/HI-TECH/3.jpg";
+import b4 from "../../assets/images/seren/oshxona/HI-TECH/54671035_3.jpg";
+import b5 from "../../assets/images/seren/oshxona/HI-TECH/9-2-1024x740.jpg";
+import b6 from "../../assets/images/seren/oshxona/HI-TECH/3.jpg";
+import b7 from "../../assets/images/seren/oshxona/HI-TECH/54671035_3.jpg";
 
 export default function Oshxona() {
   useEffect(() => {
@@ -20,8 +24,8 @@ export default function Oshxona() {
           <div className={styles.imgs}>
             <img src={b1} />
             <img src={b2} />
-            <img src={b2} />
-            <img src={b1} />
+            <img src={b3} />
+            <img src={b4} />
           </div>
           <div className={styles.bolatxt}>
             <p className={styles.txt}>
@@ -36,10 +40,31 @@ export default function Oshxona() {
           </div>
         </div>
         <Malumot />
+        <RasmlarPastki/>
       </div>
       <Footer />
     </div>
   );
+}
+
+
+function RasmlarPastki(){
+  return (
+    <div className={styles.rasmlar}>
+      <div className={styles.rasm_grp1}>
+        <img src={b5} alt="rasm" />
+        <p>AN-1123</p>
+      </div>
+      <div className={styles.rasm_grp1}>
+        <img src={b6} alt="rasm" />
+        <p>AN-1124</p>
+      </div>
+      <div className={styles.rasm_grp1}>
+        <img src={b7} alt="rasm" />
+        <p>AN-1125</p>
+      </div>
+    </div>
+  )
 }
 
 

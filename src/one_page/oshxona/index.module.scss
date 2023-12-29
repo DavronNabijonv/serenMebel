@@ -183,3 +183,29 @@
         }
     }
 }
+
+.rasmlar{
+    display: flex;
+    flex-direction: column;
+    gap: 5vw;
+    padding-bottom: 7vw;
+    .rasm_grp1{
+        width: 100%;
+        text-align: center;
+        img{
+            width: 90%;
+            margin: auto;
+            height: 65%;
+        }
+        p{
+            width: 90%;
+            margin: auto;
+            text-align: start;
+            color: white;
+            font-weight: 700;
+            font-family: "Inter";
+            font-size: 2.5vw;
+            margin: 2vw 8vw;
+        }
+    }
+}

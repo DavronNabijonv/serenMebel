@@ -7,6 +7,7 @@ import Oshxona from "./one_page/oshxona";
 import Stol from "./one_page/stolstul";
 import Yotoqxona from "./one_page/yotoqxona";
 import Yumshoq from "./one_page/yumshoq";
+import OshxonaOraliq from "./components/oraliqPage/oshxona";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Route path="/stol" element={<Stol/>} />
       <Route path="/yotoqxona" element={<Yotoqxona/>} />
       <Route path="/yumshoq" element={<Yumshoq/>} />
+      <Route path="/oshxonaOraliq" element={<OshxonaOraliq/>} />
     </Routes>
   )
 }

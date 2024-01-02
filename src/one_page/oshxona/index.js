@@ -1,14 +1,15 @@
 import React, { useEffect } from "react";
 import Navbar from "../../layout/navbar";
 import Footer from "../../layout/footer";
-import styles from './index.module.scss';
+import styles from "./index.module.scss";
 import b1 from "../../assets/images/seren/oshxona/HI-TECH/316.jpg";
 import b2 from "../../assets/images/seren/oshxona/HI-TECH/13.jpg";
 import b3 from "../../assets/images/seren/oshxona/HI-TECH/3.jpg";
-import b4 from "../../assets/images/seren/oshxona/HI-TECH/54671035_3.jpg";
-import b5 from "../../assets/images/seren/oshxona/HI-TECH/9-2-1024x740.jpg";
+import b4 from "../../assets/images/seren/oshxona/HI-TECH/image38.jpg";
+import b5 from "../../assets/images/seren/oshxona/HI-TECH/image39.jpg";
 import b6 from "../../assets/images/seren/oshxona/HI-TECH/3.jpg";
-import b7 from "../../assets/images/seren/oshxona/HI-TECH/54671035_3.jpg";
+import b7 from "../../assets/images/seren/oshxona/HI-TECH/image38.jpg";
+import { imagesHitech } from "../../components/db/mahsulotlar";
 
 export default function Oshxona() {
   useEffect(() => {
@@ -40,18 +41,23 @@ export default function Oshxona() {
           </div>
         </div>
         <Malumot />
-        <RasmlarPastki/>
+        <RasmlarPastki />
       </div>
       <Footer />
     </div>
   );
 }
 
-
-function RasmlarPastki(){
+function RasmlarPastki() {
   return (
     <div className={styles.rasmlar}>
-      <div className={styles.rasm_grp1}>
+      {imagesHitech.map((r) => (
+        <div className={styles.rasm_grp1}>
+          <img src={r.img} alt="rasm" />
+          <p>{r.ttl}</p>
+        </div>
+      ))}
+      {/* <div className={styles.rasm_grp1}>
         <img src={b5} alt="rasm" />
         <p>AN-1123</p>
       </div>
@@ -62,11 +68,10 @@ function RasmlarPastki(){
       <div className={styles.rasm_grp1}>
         <img src={b7} alt="rasm" />
         <p>AN-1125</p>
-      </div>
+      </div> */}
     </div>
-  )
+  );
 }
-
 
 function Malumot() {
   return (

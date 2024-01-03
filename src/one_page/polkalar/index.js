@@ -17,7 +17,7 @@ export default function Polkalar() {
     <div>
       <Navbar />
       <div className={styles.bolalar}>
-        <p className={styles.ttl}>Polkalar va Stellajlar mebellari</p>
+        <p className={styles.ttl}>Polkalar va Stellaj mebellari</p>
         <div className={styles.cnt}>
           <div className={styles.imgs}>
             <img src={b1} />

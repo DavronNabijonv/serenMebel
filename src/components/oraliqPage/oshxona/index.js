@@ -1,13 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../../../layout/navbar";
 import Footer from "../../../layout/footer";
 import styles from "./index.module.scss";
-import {NavLink} from 'react-router-dom'
-import b1 from '../../../assets/images/seren/oshxona/HI-TECH/image47.jpg'
-import b2 from '../../../assets/images/seren/oshxona/HI-TECH/image48.jpg'
-import b3 from '../../../assets/images/seren/oshxona/HI-TECH/image42.jpg'
+import { NavLink } from "react-router-dom";
+import b1 from "../../../assets/images/seren/oshxona/HI-TECH/image47.jpg";
+import b2 from "../../../assets/images/seren/oshxona/HI-TECH/image48.jpg";
+import b3 from "../../../assets/images/seren/oshxona/HI-TECH/image42.jpg";
 
 export default function OshxonaOraliq() {
+  useEffect(() => {
+    // Scroll to the top of the page when the component mounts
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div>
       <Navbar />

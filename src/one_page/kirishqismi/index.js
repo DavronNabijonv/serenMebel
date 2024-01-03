@@ -17,7 +17,7 @@ export default function KirishMebel() {
     <div>
       <Navbar />
       <div className={styles.bolalar}>
-        <p className={styles.ttl}>Kirish chiqish joyi mebellari</p>
+        <p className={styles.ttl}>Kirish va Shkaf mebellari</p>
         <div className={styles.cnt}>
           <div className={styles.imgs}>
             <img src={b1} />

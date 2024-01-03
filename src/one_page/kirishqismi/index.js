@@ -3,7 +3,10 @@ import Navbar from "../../layout/navbar";
 import Footer from "../../layout/footer";
 import styles from './index.module.scss';
 import b1 from "../../assets/images/m3.jpg";
-import b2 from "../../assets/images/m11.jpg";
+import b3 from "../../assets/images/m11.jpg";
+import b2 from "../../assets/images/seren/shkaf/image11.jpg";
+import b4 from "../../assets/images/seren/shkaf/image14.jpg";
+import {imagesShkaf} from '../../components/db/mahsulotlar'
 
 export default function KirishMebel() {
   useEffect(() => {
@@ -19,8 +22,8 @@ export default function KirishMebel() {
           <div className={styles.imgs}>
             <img src={b1} />
             <img src={b2} />
-            <img src={b2} />
-            <img src={b1} />
+            <img src={b3} />
+            <img src={b4} />
           </div>
           <div className={styles.bolatxt}>
             <p className={styles.txt}>
@@ -35,11 +38,40 @@ export default function KirishMebel() {
           </div>
         </div>
         <Malumot />
+        <RasmlarPastki/>
       </div>
       <Footer />
     </div>
   );
 }
+
+
+function RasmlarPastki() {
+  return (
+    <div className={styles.rasmlar}>
+      {imagesShkaf.map((r) => (
+        <div className={styles.rasm_grp1}>
+          <img src={r.img} alt="rasm" />
+          <p>{r.ttl}</p>
+        </div>
+      ))}
+      {/* <div className={styles.rasm_grp1}>
+        <img src={b5} alt="rasm" />
+        <p>AN-1123</p>
+      </div>
+      <div className={styles.rasm_grp1}>
+        <img src={b6} alt="rasm" />
+        <p>AN-1124</p>
+      </div>
+      <div className={styles.rasm_grp1}>
+        <img src={b7} alt="rasm" />
+        <p>AN-1125</p>
+      </div> */}
+    </div>
+  );
+}
+
+
 
 function Malumot() {
   return (

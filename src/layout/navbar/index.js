@@ -4,6 +4,7 @@ import { LuMenuSquare } from "react-icons/lu";
 import logo from "../../assets/images/logo2.png";
 import { useTranslation } from "react-i18next";
 import ChangeLanguage from "../../lang_select";
+import { Link } from "react-router-dom";
 
 export default function Navbar(props) {
   const [toggle, setToggle] = useState(false);
@@ -17,10 +18,12 @@ export default function Navbar(props) {
     <div className={styles.navbar}>
       <div className={styles.main}>
         <div className={styles.responsive}>
-          <a href={props.asosiy} className={styles.alone}>
-            <img src={logo} />
-            SerenMebel
-          </a>
+          <Link to={"/"}>
+            <a href={props.asosiy} className={styles.alone}>
+              <img src={logo} />
+              SerenMebel
+            </a>
+          </Link>
           <LuMenuSquare
             className={styles.resp}
             onClick={() => {

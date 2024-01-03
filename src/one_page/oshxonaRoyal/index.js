@@ -2,13 +2,13 @@ import React, { useEffect } from "react";
 import Navbar from "../../layout/navbar";
 import Footer from "../../layout/footer";
 import styles from "./index.module.scss";
-import b1 from "../../assets/images/seren/oshxona/HI-TECH/316.jpg";
-import b2 from "../../assets/images/seren/oshxona/HI-TECH/13.jpg";
-import b3 from "../../assets/images/seren/oshxona/HI-TECH/3.jpg";
-import b4 from "../../assets/images/seren/oshxona/HI-TECH/image38.jpg";
-import { imagesHitech } from "../../components/db/mahsulotlar";
+import b1 from "../../assets/images/seren/oshxona/royal/image1.jpg";
+import b2 from "../../assets/images/seren/oshxona/royal/image2.jpg";
+import b3 from "../../assets/images/seren/oshxona/royal/image3.jpg";
+import b4 from "../../assets/images/seren/oshxona/royal/image4.jpg";
+import { imagesRoyal } from "../../components/db/mahsulotlar";
 
-export default function Oshxona() {
+export default function OshxonaRoyal() {
   useEffect(() => {
     // Scroll to the top of the page when the component mounts
     window.scrollTo(0, 0);
@@ -48,7 +48,7 @@ export default function Oshxona() {
 function RasmlarPastki() {
   return (
     <div className={styles.rasmlar}>
-      {imagesHitech.map((r) => (
+      {imagesRoyal.map((r) => (
         <div className={styles.rasm_grp1}>
           <img src={r.img} alt="rasm" />
           <p>{r.ttl}</p>

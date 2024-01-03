@@ -183,3 +183,46 @@
         }
     }
 }
+
+.rasmlar{
+    display: flex;
+    flex-direction: column;
+    gap: 5vw;
+    padding-bottom: 7vw;
+    .rasm_grp1{
+        width: 90%;
+        margin: auto;
+        text-align: center;
+        padding: 4vw 0 2vw 0;
+        border-radius: 3vw;
+        border: 0.18vw solid white;
+        img{
+            width: 95%;
+            margin: auto;
+            height: 50vw;
+        }
+        p{
+            width: 90%;
+            margin: auto;
+            text-align: start;
+            color: white;
+            font-weight: 700;
+            font-family: "Inter";
+            font-size: 2.5vw;
+            margin: 2vw 8vw;
+        }
+    }
+}
+
+@media(max-width:768px){
+    .rasmlar{
+        .rasm_grp1{
+            img{
+                height: 70vw;
+            }
+            p{
+                font-size: 4vw;
+            }
+        }
+    }
+}

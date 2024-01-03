@@ -5,6 +5,7 @@ import m7 from "../../../assets/images/m7.jpg";
 import m8 from "../../../assets/images/m8.jpg";
 import m9 from "../../../assets/images/m9.jpg";
 import m10 from "../../../assets/images/m10.jpg";
+import m11 from "../../../assets/images/seren/polkalar va stellaj/image15.jpg";
 // oshxona hi_tech mebel rasmlar
 import h1 from "../../../assets/images/seren/oshxona/HI-TECH/3.jpg";
 import h2 from "../../../assets/images/seren/oshxona/HI-TECH/13.jpg";
@@ -112,6 +113,173 @@ import r13 from "../../../assets/images/seren/oshxona/royal/image13.jpg";
 import r14 from "../../../assets/images/seren/oshxona/royal/image14.jpg";
 import r15 from "../../../assets/images/seren/oshxona/royal/image15.jpg";
 import r16 from "../../../assets/images/seren/oshxona/royal/image16.jpg";
+// yumshoq mebel rasmlari
+import y1 from "../../../assets/images/seren/yumshoq/image.webp";
+import y2 from "../../../assets/images/seren/yumshoq/image1.jpg";
+import y3 from "../../../assets/images/seren/yumshoq/image2.jpg";
+import y4 from "../../../assets/images/seren/yumshoq/image3.jpg";
+import y5 from "../../../assets/images/seren/yumshoq/image4.jpg";
+import y6 from "../../../assets/images/seren/yumshoq/image5.png";
+import y7 from "../../../assets/images/seren/yumshoq/image6.jpg";
+import y8 from "../../../assets/images/seren/yumshoq/image7.jpg";
+import y9 from "../../../assets/images/seren/yumshoq/image8.jpg";
+import y10 from "../../../assets/images/seren/yumshoq/image9.jpg";
+import y11 from "../../../assets/images/seren/yumshoq/image10.jpg";
+import y12 from "../../../assets/images/seren/yumshoq/image11.jpg";
+import y13 from "../../../assets/images/seren/yumshoq/image12.jpg";
+import y14 from "../../../assets/images/seren/yumshoq/image13.jpg";
+import y15 from "../../../assets/images/seren/yumshoq/image14.webp";
+import y16 from "../../../assets/images/seren/yumshoq/image15.jpg";
+import y17 from "../../../assets/images/seren/yumshoq/image16.jpg";
+import y18 from "../../../assets/images/seren/yumshoq/image17.jpg";
+import y19 from "../../../assets/images/seren/yumshoq/image18.jpg";
+import y20 from "../../../assets/images/seren/yumshoq/image19.jpg";
+// yotoqxona mebel rasmlari
+import yx1 from "../../../assets/images/seren/yotoqxona/image1.jpg";
+import yx2 from "../../../assets/images/seren/yotoqxona/image2.webp";
+import yx3 from "../../../assets/images/seren/yotoqxona/image3.jpg";
+import yx4 from "../../../assets/images/seren/yotoqxona/image4.jpg";
+import yx5 from "../../../assets/images/seren/yotoqxona/image5.jpg";
+import yx6 from "../../../assets/images/seren/yotoqxona/image6.jpg";
+import yx7 from "../../../assets/images/seren/yotoqxona/image7.jpg";
+import yx8 from "../../../assets/images/seren/yotoqxona/image8.jpg";
+import yx9 from "../../../assets/images/seren/yotoqxona/image9.jpg";
+import yx10 from "../../../assets/images/seren/yotoqxona/image10.jpg";
+import yx11 from "../../../assets/images/seren/yotoqxona/image11.jpg";
+import yx12 from "../../../assets/images/seren/yotoqxona/image12.jpg";
+import yx13 from "../../../assets/images/seren/yotoqxona/image13.jpg";
+import yx14 from "../../../assets/images/seren/yotoqxona/image14.jpg";
+import yx15 from "../../../assets/images/seren/yotoqxona/image15.jpg";
+import yx16 from "../../../assets/images/seren/yotoqxona/image16.jpg";
+import yx17 from "../../../assets/images/seren/yotoqxona/image17.jpg";
+// shkaf mebel rasmlari
+import sh1 from "../../../assets/images/seren/shkaf/image.webp";
+import sh2 from "../../../assets/images/seren/shkaf/image1.jpg";
+import sh3 from "../../../assets/images/seren/shkaf/image2.jpg";
+import sh4 from "../../../assets/images/seren/shkaf/image3.jpg";
+import sh5 from "../../../assets/images/seren/shkaf/image4.jpg";
+import sh6 from "../../../assets/images/seren/shkaf/image5.webp";
+import sh7 from "../../../assets/images/seren/shkaf/image6.jpg";
+import sh8 from "../../../assets/images/seren/shkaf/image7.jpg";
+import sh9 from "../../../assets/images/seren/shkaf/image8.jpg";
+import sh10 from "../../../assets/images/seren/shkaf/image9.jpg";
+import sh11 from "../../../assets/images/seren/shkaf/image10.jpg";
+import sh12 from "../../../assets/images/seren/shkaf/image11.jpg";
+import sh13 from "../../../assets/images/seren/shkaf/image12.webp";
+import sh14 from "../../../assets/images/seren/shkaf/image13.jpg";
+import sh15 from "../../../assets/images/seren/shkaf/image14.jpg";
+import sh16 from "../../../assets/images/seren/shkaf/image15.jpg";
+// polkalar va stellaj mebel rasmlar
+import p1 from "../../../assets/images/seren/polkalar va stellaj/image.webp";
+import p2 from "../../../assets/images/seren/polkalar va stellaj/image1.jpg";
+import p3 from "../../../assets/images/seren/polkalar va stellaj/image2.jpg";
+import p4 from "../../../assets/images/seren/polkalar va stellaj/image3.jpg";
+import p5 from "../../../assets/images/seren/polkalar va stellaj/image4.jpg";
+import p6 from "../../../assets/images/seren/polkalar va stellaj/image5.jpg";
+import p7 from "../../../assets/images/seren/polkalar va stellaj/image6.jpg";
+import p8 from "../../../assets/images/seren/polkalar va stellaj/image7.jpg";
+import p9 from "../../../assets/images/seren/polkalar va stellaj/image8.jpg";
+import p10 from "../../../assets/images/seren/polkalar va stellaj/image9.webp";
+import p11 from "../../../assets/images/seren/polkalar va stellaj/image10.jpg";
+import p12 from "../../../assets/images/seren/polkalar va stellaj/image11.jpg";
+import p13 from "../../../assets/images/seren/polkalar va stellaj/image12.jpg";
+import p14 from "../../../assets/images/seren/polkalar va stellaj/image13.jpg";
+import p15 from "../../../assets/images/seren/polkalar va stellaj/image14.jpg";
+import p16 from "../../../assets/images/seren/polkalar va stellaj/image15.jpg";
+import p17 from "../../../assets/images/seren/polkalar va stellaj/image16.jpg";
+import p18 from "../../../assets/images/seren/polkalar va stellaj/image17.jpg";
+import p19 from "../../../assets/images/seren/polkalar va stellaj/image18.jpg";
+import p20 from "../../../assets/images/seren/polkalar va stellaj/image19.jpg";
+import p21 from "../../../assets/images/seren/polkalar va stellaj/image20.jpg";
+import p22 from "../../../assets/images/seren/polkalar va stellaj/image21.webp";
+// ofis mebel rasmlari
+import o1 from "../../../assets/images/seren/ofis/image1.webp";
+import o2 from "../../../assets/images/seren/ofis/image2.jpg";
+import o3 from "../../../assets/images/seren/ofis/image3.jpg";
+import o4 from "../../../assets/images/seren/ofis/image4.jpg";
+import o5 from "../../../assets/images/seren/ofis/image5.jpg";
+import o6 from "../../../assets/images/seren/ofis/image6.jpg";
+import o7 from "../../../assets/images/seren/ofis/image7.jpg";
+import o8 from "../../../assets/images/seren/ofis/image8.jpg";
+import o9 from "../../../assets/images/seren/ofis/image9.jpg";
+import o10 from "../../../assets/images/seren/ofis/image10.jpg";
+import o11 from "../../../assets/images/seren/ofis/image11.jpg";
+import o12 from "../../../assets/images/seren/ofis/image12.jpg";
+import o13 from "../../../assets/images/seren/ofis/image13.jpg";
+import o14 from "../../../assets/images/seren/ofis/image14.jpg";
+import o15 from "../../../assets/images/seren/ofis/image15.jpg";
+import o16 from "../../../assets/images/seren/ofis/image16.jpg";
+import o17 from "../../../assets/images/seren/ofis/image17.jpg";
+import o18 from "../../../assets/images/seren/ofis/image18.jpg";
+import o19 from "../../../assets/images/seren/ofis/image19.jpg";
+import o20 from "../../../assets/images/seren/ofis/image20.jpg";
+import o21 from "../../../assets/images/seren/ofis/image21.webp";
+// bolalar mebel rasmlari
+import b1 from "../../../assets/images/seren/bolalar/image.webp";
+import b2 from "../../../assets/images/seren/bolalar/image1.jpg";
+import b3 from "../../../assets/images/seren/bolalar/image2.jpg";
+import b4 from "../../../assets/images/seren/bolalar/image3.jpg";
+import b5 from "../../../assets/images/seren/bolalar/image4.jpg";
+import b6 from "../../../assets/images/seren/bolalar/image5.jpg";
+import b7 from "../../../assets/images/seren/bolalar/image6.jpg";
+import b8 from "../../../assets/images/seren/bolalar/image7.jpg";
+import b9 from "../../../assets/images/seren/bolalar/image8.jpg";
+import b10 from "../../../assets/images/seren/bolalar/image9.jpg";
+import b11 from "../../../assets/images/seren/bolalar/image10.png";
+import b12 from "../../../assets/images/seren/bolalar/image11.jpg";
+import b13 from "../../../assets/images/seren/bolalar/image12.jpg";
+import b14 from "../../../assets/images/seren/bolalar/image13.jpg";
+import b15 from "../../../assets/images/seren/bolalar/image14.jpg";
+import b16 from "../../../assets/images/seren/bolalar/image15.png";
+import b17 from "../../../assets/images/seren/bolalar/image16.jpg";
+import b18 from "../../../assets/images/seren/bolalar/image17.jpg";
+import b19 from "../../../assets/images/seren/bolalar/image18.webp";
+// ayvon va zal hi_tech mebel rasmlar
+import zh1 from "../../../assets/images/seren/ayvon va zal/hi tech/image1.jpg";
+import zh2 from "../../../assets/images/seren/ayvon va zal/hi tech/image2.jpg";
+import zh3 from "../../../assets/images/seren/ayvon va zal/hi tech/image3.jpg";
+import zh4 from "../../../assets/images/seren/ayvon va zal/hi tech/image4.jpg";
+import zh5 from "../../../assets/images/seren/ayvon va zal/hi tech/image5.jpg";
+import zh6 from "../../../assets/images/seren/ayvon va zal/hi tech/image6.jpg";
+import zh7 from "../../../assets/images/seren/ayvon va zal/hi tech/image7.jpg";
+import zh8 from "../../../assets/images/seren/ayvon va zal/hi tech/image8.jpg";
+import zh9 from "../../../assets/images/seren/ayvon va zal/hi tech/image9.jpg";
+import zh10 from "../../../assets/images/seren/ayvon va zal/hi tech/image10.jpg";
+import zh11 from "../../../assets/images/seren/ayvon va zal/hi tech/image11.jpg";
+import zh12 from "../../../assets/images/seren/ayvon va zal/hi tech/image12.webp";
+import zh13 from "../../../assets/images/seren/ayvon va zal/hi tech/image13.jpg";
+import zh14 from "../../../assets/images/seren/ayvon va zal/hi tech/image14.jpg";
+import zh15 from "../../../assets/images/seren/ayvon va zal/hi tech/image15.jpg";
+import zh16 from "../../../assets/images/seren/ayvon va zal/hi tech/image16.jpg";
+import zh17 from "../../../assets/images/seren/ayvon va zal/hi tech/image17.jpg";
+import zh18 from "../../../assets/images/seren/ayvon va zal/hi tech/image18.jpg";
+import zh19 from "../../../assets/images/seren/ayvon va zal/hi tech/image19.webp";
+import zh20 from "../../../assets/images/seren/ayvon va zal/hi tech/image20.jpg";
+import zh21 from "../../../assets/images/seren/ayvon va zal/hi tech/image21.jpg";
+import zh22 from "../../../assets/images/seren/ayvon va zal/hi tech/image22.jpg";
+import zh23 from "../../../assets/images/seren/ayvon va zal/hi tech/image23.jpeg";
+import zh24 from "../../../assets/images/seren/ayvon va zal/hi tech/image24.jpg";
+// ayvon va zal klassik mebel rasmlar
+import zk1 from "../../../assets/images/seren/ayvon va zal/klassik/image1.jpg";
+import zk2 from "../../../assets/images/seren/ayvon va zal/klassik/image2.jpg";
+import zk3 from "../../../assets/images/seren/ayvon va zal/klassik/image3.jpg";
+import zk4 from "../../../assets/images/seren/ayvon va zal/klassik/image4.jpg";
+import zk5 from "../../../assets/images/seren/ayvon va zal/klassik/image5.jpg";
+import zk6 from "../../../assets/images/seren/ayvon va zal/klassik/image6.jpg";
+import zk7 from "../../../assets/images/seren/ayvon va zal/klassik/image7.jpg";
+import zk8 from "../../../assets/images/seren/ayvon va zal/klassik/image8.jpg";
+import zk9 from "../../../assets/images/seren/ayvon va zal/klassik/image9.jpg";
+import zk10 from "../../../assets/images/seren/ayvon va zal/klassik/image10.jpg";
+import zk11 from "../../../assets/images/seren/ayvon va zal/klassik/image11.jpg";
+import zk12 from "../../../assets/images/seren/ayvon va zal/klassik/image12.webp";
+import zk13 from "../../../assets/images/seren/ayvon va zal/klassik/image13.jpg";
+import zk14 from "../../../assets/images/seren/ayvon va zal/klassik/image14.jpg";
+import zk15 from "../../../assets/images/seren/ayvon va zal/klassik/image15.jpg";
+import zk16 from "../../../assets/images/seren/ayvon va zal/klassik/image16.jpg";
+import zk17 from "../../../assets/images/seren/ayvon va zal/klassik/image17.jpg";
+import zk18 from "../../../assets/images/seren/ayvon va zal/klassik/image18.jpg";
+import zk19 from "../../../assets/images/seren/ayvon va zal/klassik/image19.jpg";
+import zk20 from "../../../assets/images/seren/ayvon va zal/klassik/image20.jpg";
 
 export const mahsulot = [
   {
@@ -122,7 +290,7 @@ export const mahsulot = [
   },
   {
     id: 2,
-    ttl: "Kirish chiqish joyi uchun mebellar",
+    ttl: "Kirish joyi va shkaf mebellar",
     path: "/km",
     img: m3,
   },
@@ -140,8 +308,8 @@ export const mahsulot = [
   },
   {
     id: 5,
-    ttl: "Stol stullar",
-    path: "/stol",
+    ttl: "Stol va zal mebellari",
+    path: "/AyvonOraliq",
     img: m8,
   },
   {
@@ -155,6 +323,12 @@ export const mahsulot = [
     ttl: "Bolalar mebellari",
     path: "/bolalar",
     img: m10,
+  },
+  {
+    id: 8,
+    ttl: "Polkalar va stellaj",
+    path: "/polkalar",
+    img: m11,
   },
 ];
 
@@ -580,5 +754,665 @@ export const imagesRoyal = [
   {
     img: r16,
     ttl: "AA-1138",
+  },
+];
+
+export const imagesYumshoq = [
+  {
+    img: y1,
+    ttl: "AA-1123",
+  },
+  {
+    img: y2,
+    ttl: "AA-1124",
+  },
+  {
+    img: y3,
+    ttl: "AA-1125",
+  },
+  {
+    img: y4,
+    ttl: "AA-1126",
+  },
+  {
+    img: y5,
+    ttl: "AA-1123",
+  },
+  {
+    img: y6,
+    ttl: "AA-1127",
+  },
+  {
+    img: y7,
+    ttl: "AA-1128",
+  },
+  {
+    img: y8,
+    ttl: "AA-1129",
+  },
+  {
+    img: y9,
+    ttl: "AA-1130",
+  },
+  {
+    img: y10,
+    ttl: "AA-1131",
+  },
+  {
+    img: y11,
+    ttl: "AA-1132",
+  },
+  {
+    img: y12,
+    ttl: "AA-1133",
+  },
+  {
+    img: y13,
+    ttl: "AA-1134",
+  },
+  {
+    img: y14,
+    ttl: "AA-1135",
+  },
+  {
+    img: y15,
+    ttl: "AA-1136",
+  },
+  {
+    img: y16,
+    ttl: "AA-1137",
+  },
+  {
+    img: y17,
+    ttl: "AA-1138",
+  },
+  {
+    img: y18,
+    ttl: "AA-1139",
+  },
+  {
+    img: y19,
+    ttl: "AA-1140",
+  },
+  {
+    img: y20,
+    ttl: "AA-1141",
+  },
+];
+
+export const imagesYotoqxona = [
+  {
+    img: yx1,
+    ttl: "AA-1123",
+  },
+  {
+    img: yx2,
+    ttl: "AA-1124",
+  },
+  {
+    img: yx3,
+    ttl: "AA-1125",
+  },
+  {
+    img: yx4,
+    ttl: "AA-1126",
+  },
+  {
+    img: yx5,
+    ttl: "AA-1127",
+  },
+  {
+    img: yx6,
+    ttl: "AA-1128",
+  },
+  {
+    img: yx7,
+    ttl: "AA-1129",
+  },
+  {
+    img: yx8,
+    ttl: "AA-1130",
+  },
+  {
+    img: yx9,
+    ttl: "AA-1131",
+  },
+  {
+    img: yx10,
+    ttl: "AA-1132",
+  },
+  {
+    img: yx11,
+    ttl: "AA-1133",
+  },
+  {
+    img: yx12,
+    ttl: "AA-1134",
+  },
+  {
+    img: yx13,
+    ttl: "AA-1135",
+  },
+  {
+    img: yx14,
+    ttl: "AA-1136",
+  },
+  {
+    img: yx15,
+    ttl: "AA-1137",
+  },
+  {
+    img: yx16,
+    ttl: "AA-1138",
+  },
+  {
+    img: yx17,
+    ttl: "AA-1139",
+  },
+];
+
+export const imagesShkaf = [
+  {
+    img: sh1,
+    ttl: "AA-1123",
+  },
+  {
+    img: sh2,
+    ttl: "AA-1123",
+  },
+  {
+    img: sh3,
+    ttl: "AA-1123",
+  },
+  {
+    img: sh4,
+    ttl: "AA-1123",
+  },
+  {
+    img: sh5,
+    ttl: "AA-1123",
+  },
+  {
+    img: sh6,
+    ttl: "AA-1123",
+  },
+  {
+    img: sh7,
+    ttl: "AA-1123",
+  },
+  {
+    img: sh8,
+    ttl: "AA-1123",
+  },
+  {
+    img: sh9,
+    ttl: "AA-1123",
+  },
+  {
+    img: sh10,
+    ttl: "AA-1123",
+  },
+  {
+    img: sh11,
+    ttl: "AA-1123",
+  },
+  {
+    img: sh12,
+    ttl: "AA-1123",
+  },
+  {
+    img: sh13,
+    ttl: "AA-1123",
+  },
+  {
+    img: sh14,
+    ttl: "AA-1123",
+  },
+  {
+    img: sh15,
+    ttl: "AA-1123",
+  },
+  {
+    img: sh16,
+    ttl: "AA-1123",
+  },
+];
+
+export const imagesPolka = [
+  {
+    img: p1,
+    ttl: "AA-1123",
+  },
+  {
+    img: p2,
+    ttl: "AA-1124",
+  },
+  {
+    img: p3,
+    ttl: "AA-1125",
+  },
+  {
+    img: p4,
+    ttl: "AA-1126",
+  },
+  {
+    img: p5,
+    ttl: "AA-1127",
+  },
+  {
+    img: p6,
+    ttl: "AA-1128",
+  },
+  {
+    img: p7,
+    ttl: "AA-1129",
+  },
+  {
+    img: p8,
+    ttl: "AA-1130",
+  },
+  {
+    img: p9,
+    ttl: "AA-1131",
+  },
+  {
+    img: p10,
+    ttl: "AA-1132",
+  },
+  {
+    img: p11,
+    ttl: "AA-1133",
+  },
+  {
+    img: p12,
+    ttl: "AA-1134",
+  },
+  {
+    img: p13,
+    ttl: "AA-1135",
+  },
+  {
+    img: p14,
+    ttl: "AA-1136",
+  },
+  {
+    img: p15,
+    ttl: "AA-1137",
+  },
+  {
+    img: p16,
+    ttl: "AA-1138",
+  },
+  {
+    img: p17,
+    ttl: "AA-1139",
+  },
+  {
+    img: p18,
+    ttl: "AA-1140",
+  },
+  {
+    img: p19,
+    ttl: "AA-1141",
+  },
+  {
+    img: p20,
+    ttl: "AA-1142",
+  },
+  {
+    img: p21,
+    ttl: "AA-1143",
+  },
+  {
+    img: p22,
+    ttl: "AA-1144",
+  },
+];
+
+export const imagesOfis = [
+  {
+    img: o1,
+    ttl: "AA-1124",
+  },
+  {
+    img: o2,
+    ttl: "AA-1125",
+  },
+  {
+    img: o3,
+    ttl: "AA-1126",
+  },
+  {
+    img: o4,
+    ttl: "AA-1127",
+  },
+  {
+    img: o5,
+    ttl: "AA-1128",
+  },
+  {
+    img: o6,
+    ttl: "AA-1129",
+  },
+  {
+    img: o7,
+    ttl: "AA-1130",
+  },
+  {
+    img: o8,
+    ttl: "AA-1131",
+  },
+  {
+    img: o9,
+    ttl: "AA-1132",
+  },
+  {
+    img: o10,
+    ttl: "AA-1133",
+  },
+  {
+    img: o11,
+    ttl: "AA-1134",
+  },
+  {
+    img: o12,
+    ttl: "AA-1135",
+  },
+  {
+    img: o13,
+    ttl: "AA-1136",
+  },
+  {
+    img: o14,
+    ttl: "AA-1137",
+  },
+  {
+    img: o15,
+    ttl: "AA-1138",
+  },
+  {
+    img: o16,
+    ttl: "AA-1139",
+  },
+  {
+    img: o17,
+    ttl: "AA-1140",
+  },
+  {
+    img: o18,
+    ttl: "AA-1141",
+  },
+  {
+    img: o19,
+    ttl: "AA-1142",
+  },
+  {
+    img: o20,
+    ttl: "AA-1143",
+  },
+  {
+    img: o21,
+    ttl: "AA-1144",
+  },
+];
+
+export const imagesBolalar = [
+  {
+    img: b1,
+    ttl: "AA-1123",
+  },
+  {
+    img: b2,
+    ttl: "AA-1124",
+  },
+  {
+    img: b3,
+    ttl: "AA-1125",
+  },
+  {
+    img: b4,
+    ttl: "AA-1126",
+  },
+  {
+    img: b5,
+    ttl: "AA-1127",
+  },
+  {
+    img: b6,
+    ttl: "AA-1128",
+  },
+  {
+    img: b7,
+    ttl: "AA-1129",
+  },
+  {
+    img: b8,
+    ttl: "AA-1130",
+  },
+  {
+    img: b9,
+    ttl: "AA-1131",
+  },
+  {
+    img: b10,
+    ttl: "AA-1132",
+  },
+  {
+    img: b11,
+    ttl: "AA-1133",
+  },
+  {
+    img: b12,
+    ttl: "AA-1134",
+  },
+  {
+    img: b13,
+    ttl: "AA-1135",
+  },
+  {
+    img: b14,
+    ttl: "AA-1136",
+  },
+  {
+    img: b15,
+    ttl: "AA-1137",
+  },
+  {
+    img: b16,
+    ttl: "AA-1138",
+  },
+  {
+    img: b17,
+    ttl: "AA-1139",
+  },
+  {
+    img: b18,
+    ttl: "AA-1140",
+  },
+  {
+    img: b19,
+    ttl: "AA-1141",
+  },
+];
+
+export const imagesZalHi_tech = [
+  {
+    img: zh1,
+    ttl: "AA-1123",
+  },
+  {
+    img: zh2,
+    ttl: "AA-1124",
+  },
+  {
+    img: zh3,
+    ttl: "AA-1125",
+  },
+  {
+    img: zh4,
+    ttl: "AA-1126",
+  },
+  {
+    img: zh5,
+    ttl: "AA-1127",
+  },
+  {
+    img: zh6,
+    ttl: "AA-1128",
+  },
+  {
+    img: zh7,
+    ttl: "AA-1129",
+  },
+  {
+    img: zh8,
+    ttl: "AA-1130",
+  },
+  {
+    img: zh9,
+    ttl: "AA-1131",
+  },
+  {
+    img: zh10,
+    ttl: "AA-1132",
+  },
+  {
+    img: zh11,
+    ttl: "AA-1133",
+  },
+  {
+    img: zh12,
+    ttl: "AA-1134",
+  },
+  {
+    img: zh13,
+    ttl: "AA-1135",
+  },
+  {
+    img: zh14,
+    ttl: "AA-1136",
+  },
+  {
+    img: zh15,
+    ttl: "AA-1137",
+  },
+  {
+    img: zh16,
+    ttl: "AA-1138",
+  },
+  {
+    img: zh17,
+    ttl: "AA-1139",
+  },
+  {
+    img: zh18,
+    ttl: "AA-1140",
+  },
+  {
+    img: zh19,
+    ttl: "AA-1141",
+  },
+  {
+    img: zh20,
+    ttl: "AA-1142",
+  },
+  {
+    img: zh21,
+    ttl: "AA-1143",
+  },
+  {
+    img: zh22,
+    ttl: "AA-1144",
+  },
+  {
+    img: zh23,
+    ttl: "AA-1145",
+  },
+  {
+    img: zh24,
+    ttl: "AA-1146",
+  },
+];
+
+export const imagesZalKlassik = [
+  {
+    img: zk1,
+    ttl: "AA-1123",
+  },
+  {
+    img: zk2,
+    ttl: "AA-1124",
+  },
+  {
+    img: zk3,
+    ttl: "AA-1125",
+  },
+  {
+    img: zk4,
+    ttl: "AA-1126",
+  },
+  {
+    img: zk5,
+    ttl: "AA-1127",
+  },
+  {
+    img: zk6,
+    ttl: "AA-1128",
+  },
+  {
+    img: zk7,
+    ttl: "AA-1129",
+  },
+  {
+    img: zk8,
+    ttl: "AA-1130",
+  },
+  {
+    img: zk9,
+    ttl: "AA-1131",
+  },
+  {
+    img: zk10,
+    ttl: "AA-1132",
+  },
+  {
+    img: zk11,
+    ttl: "AA-1133",
+  },
+  {
+    img: zk12,
+    ttl: "AA-1134",
+  },
+  {
+    img: zk13,
+    ttl: "AA-1135",
+  },
+  {
+    img: zk14,
+    ttl: "AA-1136",
+  },
+  {
+    img: zk15,
+    ttl: "AA-1137",
+  },
+  {
+    img: zk16,
+    ttl: "AA-1138",
+  },
+  {
+    img: zk17,
+    ttl: "AA-1139",
+  },
+  {
+    img: zk18,
+    ttl: "AA-1140",
+  },
+  {
+    img: zk19,
+    ttl: "AA-1141",
+  },
+  {
+    img: zk20,
+    ttl: "AA-1142",
   },
 ];

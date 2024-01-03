@@ -4,6 +4,9 @@ import Footer from "../../layout/footer";
 import styles from "./index.module.scss";
 import b1 from "../../assets/images/m1.jpg";
 import b2 from "../../assets/images/m9.jpg";
+import b3 from "../../assets/images/seren/yotoqxona/image9.jpg";
+import b4 from "../../assets/images/seren/yotoqxona/image3.jpg";
+import {imagesYotoqxona} from '../../components/db/mahsulotlar'
 
 export default function Yotoqxona() {
   useEffect(() => {
@@ -14,13 +17,13 @@ export default function Yotoqxona() {
     <div>
       <Navbar />
       <div className={styles.bolalar}>
-        <p className={styles.ttl}>Kirish chiqish joyi mebellari</p>
+        <p className={styles.ttl}>Yotoqxona mebellari</p>
         <div className={styles.cnt}>
           <div className={styles.imgs}>
             <img src={b1} />
             <img src={b2} />
-            <img src={b2} />
-            <img src={b1} />
+            <img src={b3} />
+            <img src={b4} />
           </div>
           <div className={styles.bolatxt}>
             <p className={styles.txt}>
@@ -35,8 +38,34 @@ export default function Yotoqxona() {
           </div>
         </div>
         <Malumot />
+        <RasmlarPastki/>
       </div>
       <Footer />
+    </div>
+  );
+}
+
+function RasmlarPastki() {
+  return (
+    <div className={styles.rasmlar}>
+      {imagesYotoqxona.map((r) => (
+        <div className={styles.rasm_grp1}>
+          <img src={r.img} alt="rasm" />
+          <p>{r.ttl}</p>
+        </div>
+      ))}
+      {/* <div className={styles.rasm_grp1}>
+        <img src={b5} alt="rasm" />
+        <p>AN-1123</p>
+      </div>
+      <div className={styles.rasm_grp1}>
+        <img src={b6} alt="rasm" />
+        <p>AN-1124</p>
+      </div>
+      <div className={styles.rasm_grp1}>
+        <img src={b7} alt="rasm" />
+        <p>AN-1125</p>
+      </div> */}
     </div>
   );
 }

@@ -6,6 +6,7 @@ import m8 from "../../../assets/images/m8.jpg";
 import m9 from "../../../assets/images/m9.jpg";
 import m10 from "../../../assets/images/m10.jpg";
 import m11 from "../../../assets/images/seren/polkalar va stellaj/image15.jpg";
+import m12 from "../../../assets/images/seren/ayvon va zal/hi tech/image15.jpg";
 // oshxona hi_tech mebel rasmlar
 import h1 from "../../../assets/images/seren/oshxona/HI-TECH/3.jpg";
 import h2 from "../../../assets/images/seren/oshxona/HI-TECH/13.jpg";
@@ -280,6 +281,13 @@ import zk17 from "../../../assets/images/seren/ayvon va zal/klassik/image17.jpg"
 import zk18 from "../../../assets/images/seren/ayvon va zal/klassik/image18.jpg";
 import zk19 from "../../../assets/images/seren/ayvon va zal/klassik/image19.jpg";
 import zk20 from "../../../assets/images/seren/ayvon va zal/klassik/image20.jpg";
+// stol mebel rasmlari
+import s1 from "../../../assets/images/m8.jpg";
+import s2 from "../../../assets/images/m12.jpg";
+import s3 from "../../../assets/images/s1.jpg";
+import s4 from "../../../assets/images/s2.jpg";
+import s5 from "../../../assets/images/s3.jpg";
+import s6 from "../../../assets/images/s4.jpg";
 
 export const mahsulot = [
   {
@@ -290,7 +298,7 @@ export const mahsulot = [
   },
   {
     id: 2,
-    ttl: "Kirish joyi va shkaf mebellar",
+    ttl: "Shkaf mebellar",
     path: "/km",
     img: m3,
   },
@@ -308,9 +316,9 @@ export const mahsulot = [
   },
   {
     id: 5,
-    ttl: "Stol va zal mebellari",
+    ttl: "Ayvon va zal mebellari",
     path: "/AyvonOraliq",
-    img: m8,
+    img: m12,
   },
   {
     id: 6,
@@ -329,6 +337,12 @@ export const mahsulot = [
     ttl: "Polkalar va stellaj",
     path: "/polkalar",
     img: m11,
+  },
+  {
+    id: 9,
+    ttl: "Stol va Stulllar",
+    path: "/stolst",
+    img: m8,
   },
 ];
 
@@ -1414,5 +1428,32 @@ export const imagesZalKlassik = [
   {
     img: zk20,
     ttl: "AA-1142",
+  },
+];
+
+export const imagesStol = [
+  {
+    img: s1,
+    ttl: "AA-1123",
+  },
+  {
+    img: s2,
+    ttl: "AA-1124",
+  },
+  {
+    img: s3,
+    ttl: "AA-1125",
+  },
+  {
+    img: s4,
+    ttl: "AA-1126",
+  },
+  {
+    img: s5,
+    ttl: "AA-1127",
+  },
+  {
+    img: s6,
+    ttl: "AA-1128",
   },
 ];

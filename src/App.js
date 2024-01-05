@@ -13,6 +13,7 @@ import OshxonaRoyal from "./one_page/oshxonaRoyal";
 import AyvonZal from "./components/oraliqPage/ayvonZal";
 import AyvonKlassik from "./one_page/ayvonKlassik";
 import Polkalar from "./one_page/polkalar";
+import Stolst from "./one_page/stolst";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
       <Route path="/AyvonOraliq" element={<AyvonZal/>} />
       <Route path="/AyvonKlassik" element={<AyvonKlassik/>} />
       <Route path="/polkalar" element={<Polkalar/>} />
+      <Route path="/stolst" element={<Stolst/>} />
     </Routes>
   );
 }

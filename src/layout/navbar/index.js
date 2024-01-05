@@ -4,7 +4,8 @@ import { LuMenuSquare } from "react-icons/lu";
 import logo from "../../assets/images/logo2.png";
 import { useTranslation } from "react-i18next";
 import ChangeLanguage from "../../lang_select";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
+import { NavLink } from "react-router-dom";
 
 export default function Navbar(props) {
   const [toggle, setToggle] = useState(false);
@@ -18,12 +19,12 @@ export default function Navbar(props) {
     <div className={styles.navbar}>
       <div className={styles.main}>
         <div className={styles.responsive}>
-          <Link to={"/"}>
-            <a href={props.asosiy} className={styles.alone}>
+          <NavLink to={"/"}>
+            <a className={styles.alone}>
               <img src={logo} />
               SerenMebel
             </a>
-          </Link>
+          </NavLink>
           <LuMenuSquare
             className={styles.resp}
             onClick={() => {
@@ -35,38 +36,66 @@ export default function Navbar(props) {
           </div>
         </div>
         <div className={styles.nvg} style={toggle ? { display: "flex" } : {}}>
-          <a
-            href={props.haqida}
-            onClick={() => {
-              toggle && setToggle(!toggle);
-            }}
+          <Link
+            to={props.haqida}
+            spy={true}
+            smooth={true}
+            offset={50}
+            duration={500}
           >
-            {t("haqida")}
-          </a>
-          <a
-            href={props.mahsulot}
-            onClick={() => {
-              toggle && setToggle(!toggle);
-            }}
+            <a
+              onClick={() => {
+                toggle && setToggle(!toggle);
+              }}
+            >
+              {t("haqida")}
+            </a>
+          </Link>
+          <Link
+            to={props.mahsulot}
+            spy={true}
+            smooth={true}
+            offset={50}
+            duration={500}
           >
-            {t("mahsulot")}
-          </a>
-          <a
-            href={props.xizmat}
-            onClick={() => {
-              toggle && setToggle(!toggle);
-            }}
+            <a
+              onClick={() => {
+                toggle && setToggle(!toggle);
+              }}
+            >
+              {t("mahsulot")}
+            </a>
+          </Link>
+          <Link
+            to={props.xizmat}
+            spy={true}
+            smooth={true}
+            offset={50}
+            duration={500}
           >
-            {t("xizmat")}
-          </a>
-          <a
-            href={props.aloqa}
-            onClick={() => {
-              toggle && setToggle(!toggle);
-            }}
+            <a
+              onClick={() => {
+                toggle && setToggle(!toggle);
+              }}
+            >
+              {t("xizmat")}
+            </a>
+          </Link>
+          <Link
+            to={props.aloqa}
+            spy={true}
+            smooth={true}
+            offset={50}
+            duration={500}
           >
-            <button>{t("contact")}</button>
-          </a>
+            <a
+              onClick={() => {
+                toggle && setToggle(!toggle);
+              }}
+            >
+              <button>{t("contact")}</button>
+            </a>
+          </Link>
         </div>
       </div>
       <div

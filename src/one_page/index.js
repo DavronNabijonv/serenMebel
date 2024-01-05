@@ -10,7 +10,8 @@ import Footer from "../layout/footer";
 import LoadPart from "../components/loadPart";
 import Aloqa from "../components/pageitems/aloqa";
 import MahsulotlarSwiper from "../components/swiper";
-import XizmatSwiper from '../components/xizmatswiper'
+import XizmatSwiper from "../components/xizmatswiper";
+import { Element, animateScroll as scroll, scrollSpy } from "react-scroll";
 
 export default function MainPage() {
   const [innerWidth, setInnerWidth] = useState(window.innerWidth);
@@ -34,30 +35,27 @@ export default function MainPage() {
   return (
     <div>
       <Navbar
-        asosiy="#asosiy"
-        mahsulot="#mahsulot"
-        xizmat="#xizmat"
-        haqida="#haqida"
-        aloqa="#aloqa"
+        mahsulot="mahsulot"
+        xizmat="xizmat"
+        haqida="haqida"
+        aloqa="aloqa"
       />
-      <div id="asosiy">
-        <AsosiySwiper />
-      </div>
-      <div id="mahsulot">
+      <AsosiySwiper />
+      <Element name="mahsulot">
         {innerWidth < 600 ? <MahsulotlarSwiper /> : <Mahsulotlar />}
-      </div>
-      <div id="xizmat">
+      </Element>
+      <Element name="xizmat">
         {innerWidth < 600 ? <XizmatSwiper /> : <Xizmatlar />}
-      </div>
-      <div id="haqida">
+      </Element>
+      <Element name="haqida">
         <Haqida />
-      </div>
+      </Element>
       <Tarmoq />
       <Rasmlar />
-      <div id="aloqa">
+      <Element name="aloqa">
         <Aloqa />
-      </div>
-      <Footer mahsulot="#mahsulot" xizmat="#xizmat" haqida="#haqida" />
+      </Element>
+      <Footer mahsulot="mahsulot" xizmat="xizmat" haqida="haqida" />
     </div>
   );
 }

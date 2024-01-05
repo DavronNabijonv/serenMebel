@@ -21,7 +21,7 @@ export default function LoadPart() {
       {isLoading && (
         <div className={styles.container}>
           <p className="animate__animated animate__jackInTheBox animate__infinite animate__alternate">
-            Shamollift
+            SerenMebel
           </p>
         </div>
       )}

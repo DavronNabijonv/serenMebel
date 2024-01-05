@@ -17,12 +17,12 @@ export default function Popup({ children }) {
       <motion.div
         ref={ref}
         variants={{
-          hidden: { y:75 },
+          hidden: { y:250 },
           visible: { y:0 }
         }}
         initial="hidden"
         animate={controls}
-        transition={{ duration: 0.5, delay: 0.25 }}
+        transition={{ duration: 0.3, delay: 0.2 }}
       >
         {children}
       </motion.div>

@@ -22,42 +22,47 @@
     align-items: center;
     justify-content: center;
     gap: 1vw;
-    .grp {
-      transition: all 0.3s ease-in;
-      display: flex;
-      width: 25vw;
-      padding: 1vw;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 0.5vw;
-      border-radius: 1.4vw;
-      border: 1px solid rgba(255, 255, 255, 0.5);
-      svg {
-        width: 3vw;
-        height: 3vw;
+    div {
+      div {
+        .grp {
+          transition: all 0.3s ease-in;
+          display: flex;
+          width: 25vw;
+          padding: 1vw;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.5vw;
+          border-radius: 1.4vw;
+          border: 1px solid rgba(255, 255, 255, 0.5);
+          svg {
+            width: 3vw;
+            height: 3vw;
+          }
+          .gttl {
+            color: #fff;
+            font-family: "Inter";
+            font-size: 1.5vw;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 140%; /* 33.6px */
+            letter-spacing: 0.05vw;
+          }
+          .gtxt {
+            align-self: stretch;
+            color: rgba(255, 255, 255, 0.8);
+            font-family: "Inter";
+            font-size: 1vw;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 140%; /* 22.4px */
+            letter-spacing: 0.05vw;
+          }
+        }
+        .grp:hover {
+          scale: 0.9;
+          cursor: pointer;
+        }
       }
-      .gttl {
-        color: #fff;
-        font-family: "Inter";
-        font-size: 1.5vw;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 140%; /* 33.6px */
-        letter-spacing: 0.05vw;
-      }
-      .gtxt {
-        align-self: stretch;
-        color: rgba(255, 255, 255, 0.8);
-        font-family: "Inter";
-        font-size: 1vw;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 140%; /* 22.4px */
-        letter-spacing: 0.05vw;
-      }
-    }
-    .grp:hover{
-      margin-top: -1.5vw;
     }
   }
 }

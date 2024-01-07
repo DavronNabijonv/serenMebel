@@ -6,8 +6,10 @@ import { RiInstagramFill } from "react-icons/ri";
 import { IoLogoYoutube } from "react-icons/io5";
 import { RiFacebookFill } from "react-icons/ri";
 import { Link } from "react-scroll";
+import { useTranslation } from "react-i18next";
 
 export default function Footer(props) {
+  const { t } = useTranslation();
   return (
     <div className={styles.footer}>
       <div className={styles.f1}>
@@ -22,7 +24,7 @@ export default function Footer(props) {
             offset={50}
             duration={500}
           >
-            <a>О КОМПАНИИ</a>
+            <a>{t("haqida")}</a>
           </Link>
           <Link
             to={props.mahsulot}
@@ -31,7 +33,7 @@ export default function Footer(props) {
             offset={50}
             duration={500}
           >
-            <a>ПРОДУКЦИЯ</a>
+            <a>{t("mahsulot")}</a>
           </Link>
           <Link
             to={props.xizmat}
@@ -40,7 +42,7 @@ export default function Footer(props) {
             offset={50}
             duration={500}
           >
-            <a>Услуги</a>
+            <a>{t("xizmat")}</a>
           </Link>
         </div>
       </div>

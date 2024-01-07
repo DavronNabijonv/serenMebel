@@ -54,10 +54,12 @@
         }
       }
       .swiper-wrapper {
-        margin-bottom: 12vw;
+        margin-bottom: 6vw;
+        display: flex;
+        align-items: center;
         .swiper-slide {
           .grp {
-            margin-left: 12.5vw;
+            margin-left: 11vw;
             display: flex;
             width: 70vw;
             padding: 4vw 3vw;

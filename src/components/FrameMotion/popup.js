@@ -17,7 +17,7 @@ export default function Popup({ children }) {
       <motion.div
         ref={ref}
         variants={{
-          hidden: { y:250 },
+          hidden: { y:50 },
           visible: { y:0 }
         }}
         initial="hidden"

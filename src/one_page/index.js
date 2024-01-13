@@ -12,6 +12,8 @@ import Aloqa from "../components/pageitems/aloqa";
 import MahsulotlarSwiper from "../components/swiper";
 import XizmatSwiper from "../components/xizmatswiper";
 import { Element, animateScroll as scroll, scrollSpy } from "react-scroll";
+import { Route, Routes } from "react-router-dom";
+import { routes } from "../layout/routeConfig";
 
 export default function MainPage() {
   const [innerWidth, setInnerWidth] = useState(window.innerWidth);
@@ -33,29 +35,36 @@ export default function MainPage() {
   }
 
   return (
-    <div>
-      <Navbar
-        mahsulot="mahsulot"
-        xizmat="xizmat"
-        haqida="haqida"
-        aloqa="aloqa"
-      />
-      <AsosiySwiper />
-      <Element name="mahsulot">
-        {innerWidth < 600 ? <MahsulotlarSwiper /> : <Mahsulotlar />}
-      </Element>
-      <Element name="xizmat">
-        {innerWidth < 600 ? <XizmatSwiper /> : <Xizmatlar />}
-      </Element>
-      <Element name="haqida">
-        <Haqida />
-      </Element>
-      <Tarmoq />
-      <Rasmlar />
-      <Element name="aloqa">
-        <Aloqa />
-      </Element>
-      <Footer mahsulot="mahsulot" xizmat="xizmat" haqida="haqida" />
-    </div>
+    <>
+      <div>
+        {/* <Navbar
+          mahsulot="mahsulot"
+          xizmat="xizmat"
+          haqida="haqida"
+          aloqa="aloqa"
+        /> */}
+        <AsosiySwiper />
+        <Element name="mahsulot">
+          {innerWidth < 600 ? <MahsulotlarSwiper /> : <Mahsulotlar />}
+        </Element>
+        <Element name="xizmat">
+          {innerWidth < 600 ? <XizmatSwiper /> : <Xizmatlar />}
+        </Element>
+        <Element name="haqida">
+          <Haqida />
+        </Element>
+        <Tarmoq />
+        <Rasmlar />
+        <Element name="aloqa">
+          <Aloqa />
+        </Element>
+        {/* <Footer mahsulot="mahsulot" xizmat="xizmat" haqida="haqida" /> */}
+      </div>
+      {/* <Routes>
+        {routes.map(({ id, ...rest }) => (
+          <Route key={id} {...rest} />
+        ))}
+      </Routes> */}
+    </>
   );
 }

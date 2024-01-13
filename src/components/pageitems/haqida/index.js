@@ -1,29 +1,20 @@
 import React from "react";
 import styles from "./index.module.scss";
-import deco1 from '../../../assets/images/m1.jpg'
+import deco1 from "../../../assets/images/m1.jpg";
 import deco3 from "../../../assets/images/m2.jpg";
+import { useTranslation } from "react-i18next";
 
 export default function Haqida() {
+  const { t } = useTranslation();
   return (
     <div className={styles.haqida}>
       <div className={styles.f1}>
         <img src={deco1} />
         <div className={styles.txtgrp}>
           <p className={styles.ttl}>О КОМПАНИИ</p>
-          <p className={styles.txt}>
-            «Для нас лифт – это уникальный механизм, а не просто квадратный
-            короб, который перемещает Вас вверх-вниз. Поездка в нашем лифте –
-            это абсолютно неповторимый опыт для любого пассажира. В основе
-            создания лифта лежат технологии высочайшего уровня, благодаря чему
-            меняется восприятие лифтав целом».
-          </p>
+          <p className={styles.txt}>{t("p1")}</p>
           <img src={deco1} />
-          <p className={styles.txt}>
-            Мы компания Shamollift, предоставляющая нашим клиентам самое
-            передовое лифтовое оборудование и полный спектр услуг от
-            проектирования до технического обслуживания пассажирских, кухонных,
-            строительных, автомобильных и грузовых лифтов, а также эскалаторов.
-          </p>
+          <p className={styles.txt}>{t("p2")}</p>
         </div>
       </div>
       <div className={styles.alone}>
@@ -31,18 +22,7 @@ export default function Haqida() {
       </div>
       <div className={styles.f2}>
         <div className={styles.txtgrp}>
-          <p className={styles.txt}>
-            Компания была создана в 2008 году в Турции, с тех пор компания с
-            каждым годом все совершенствует свою продукцию занимая достойное
-            место на мировом рынке лифтового оборудования. Компания занимается
-            производством лифтов, пассажирского, грузового типа, основанных на
-            гидравлике и электрике. Благодаря накопленному опыту, лифты
-            Shamollift отличаются надежностью, легкостью установки и удобством
-            обслуживания. На территорию Узбекистана продукция бренда поступает
-            уже полностью укомплектованной и готовой к установке. На территорию
-            Узбекистана продукция бренда поступает уже полностью
-            укомплектованной и готовой к установке.
-          </p>
+          <p className={styles.txt}>{t("p3")}</p>
         </div>
         <img src={deco3} />
       </div>

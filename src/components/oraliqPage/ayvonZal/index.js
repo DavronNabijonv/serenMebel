@@ -16,7 +16,7 @@ export default function AyvonZal() {
 
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       <div className={styles.oraliqo}>
         <div className={styles.oraliq_grp}>
           <img src={b1} alt="hi_tech" />
@@ -33,7 +33,7 @@ export default function AyvonZal() {
           </NavLink>
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

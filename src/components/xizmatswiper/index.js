@@ -1,6 +1,5 @@
 import React from "react";
 import "./styles.scss";
-import { xizmat } from "../db/xizmatlar";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -27,7 +26,7 @@ export default function XizmatSwiper() {
   const { t } = useTranslation();
   return (
     <div className="swipergrp">
-      <p className="ttl">Наша продукция</p>
+      <p className="ttl">{t("b_xizmat")}</p>
       <div className="swgrp">
         <Swiper
           spaceBetween={0}

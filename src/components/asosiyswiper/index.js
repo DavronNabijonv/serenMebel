@@ -15,12 +15,10 @@ import a1 from "../../assets/images/m5.jpg";
 import a2 from "../../assets/images/m3.jpg";
 import a3 from "../../assets/images/m4.jpg";
 import a4 from "../../assets/images/m9.jpg";
-import LoadPart from "../loadPart";
 
 export default function AsosiySwiper() {
   return (
     <>
-    <LoadPart/>
       <div className="asosiy">
         <Swiper
           spaceBetween={0}

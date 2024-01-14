@@ -21,7 +21,6 @@ export default function Polkalar() {
   }, []);
   return (
     <div>
-      {/* <Navbar /> */}
       <div className={styles.bolalar}>
         <p className={styles.ttl}>Polkalar va Stellaj mebellari</p>
         <div className={styles.cnt}>
@@ -38,7 +37,6 @@ export default function Polkalar() {
         <Malumot />
         <RasmlarPastki />
       </div>
-      {/* <Footer /> */}
     </div>
   );
 }

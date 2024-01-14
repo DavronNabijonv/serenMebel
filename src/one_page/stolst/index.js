@@ -21,7 +21,6 @@ export default function Stolst() {
   }, []);
   return (
     <div>
-      {/* <Navbar /> */}
       <div className={styles.bolalar}>
         <p className={styles.ttl}>Stol Stul mebellari</p>
         <div className={styles.cnt}>
@@ -38,7 +37,6 @@ export default function Stolst() {
         <Malumot />
         <RasmlarPastki />
       </div>
-      {/* <Footer /> */}
     </div>
   );
 }

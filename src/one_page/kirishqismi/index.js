@@ -21,7 +21,6 @@ export default function KirishMebel() {
   }, []);
   return (
     <div>
-      {/* <Navbar /> */}
       <div className={styles.bolalar}>
         <p className={styles.ttl}>Kirish va Shkaf mebellari</p>
         <div className={styles.cnt}>
@@ -38,7 +37,6 @@ export default function KirishMebel() {
         <Malumot />
         <RasmlarPastki />
       </div>
-      {/* <Footer /> */}
     </div>
   );
 }

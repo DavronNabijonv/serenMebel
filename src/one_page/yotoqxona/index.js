@@ -21,7 +21,6 @@ export default function Yotoqxona() {
   }, []);
   return (
     <div>
-      {/* <Navbar /> */}
       <div className={styles.bolalar}>
         <p className={styles.ttl}>Yotoqxona mebellari</p>
         <div className={styles.cnt}>
@@ -38,7 +37,6 @@ export default function Yotoqxona() {
         <Malumot />
         <RasmlarPastki />
       </div>
-      {/* <Footer /> */}
     </div>
   );
 }

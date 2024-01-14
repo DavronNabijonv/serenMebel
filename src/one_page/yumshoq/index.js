@@ -21,7 +21,6 @@ export default function Yumshoq() {
   }, []);
   return (
     <div>
-      {/* <Navbar /> */}
       <div className={styles.bolalar}>
         <p className={styles.ttl}>Yumshoq mebellari</p>
         <div className={styles.cnt}>
@@ -38,7 +37,6 @@ export default function Yumshoq() {
         <Malumot />
         <RasmlarPastki />
       </div>
-      {/* <Footer /> */}
     </div>
   );
 }

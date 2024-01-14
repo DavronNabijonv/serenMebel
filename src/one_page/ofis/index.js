@@ -21,7 +21,6 @@ export default function Ofis() {
   }, []);
   return (
     <div>
-      {/* <Navbar /> */}
       <div className={styles.bolalar}>
         <p className={styles.ttl}>Ofis mebellari</p>
         <div className={styles.cnt}>
@@ -38,7 +37,6 @@ export default function Ofis() {
         <Malumot />
         <RasmlarPastki />
       </div>
-      {/* <Footer /> */}
     </div>
   );
 }

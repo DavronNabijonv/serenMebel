@@ -21,7 +21,6 @@ export default function Bolalar() {
   }, []);
   return (
     <div>
-      {/* <Navbar /> */}
       <div className={styles.bolalar}>
         <p className={styles.ttl}>Bolalar mebellari</p>
         <div className={styles.cnt}>
@@ -38,7 +37,6 @@ export default function Bolalar() {
         <Malumot />
         <RasmlarPastki />
       </div>
-      {/* <Footer /> */}
     </div>
   );
 }

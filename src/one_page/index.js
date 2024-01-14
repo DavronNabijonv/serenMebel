@@ -37,12 +37,6 @@ export default function MainPage() {
   return (
     <>
       <div>
-        {/* <Navbar
-          mahsulot="mahsulot"
-          xizmat="xizmat"
-          haqida="haqida"
-          aloqa="aloqa"
-        /> */}
         <AsosiySwiper />
         <Element name="mahsulot">
           {innerWidth < 600 ? <MahsulotlarSwiper /> : <Mahsulotlar />}
@@ -58,13 +52,7 @@ export default function MainPage() {
         <Element name="aloqa">
           <Aloqa />
         </Element>
-        {/* <Footer mahsulot="mahsulot" xizmat="xizmat" haqida="haqida" /> */}
       </div>
-      {/* <Routes>
-        {routes.map(({ id, ...rest }) => (
-          <Route key={id} {...rest} />
-        ))}
-      </Routes> */}
     </>
   );
 }

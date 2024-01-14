@@ -21,7 +21,6 @@ export default function Stol() {
   }, []);
   return (
     <div>
-      {/* <Navbar /> */}
       <div className={styles.bolalar}>
         <p className={styles.ttl}>Ayvon va Zal mebellari</p>
         <div className={styles.cnt}>
@@ -38,7 +37,6 @@ export default function Stol() {
         <Malumot />
         <RasmlarPastki />
       </div>
-      {/* <Footer /> */}
     </div>
   );
 }

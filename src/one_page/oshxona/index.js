@@ -21,7 +21,6 @@ export default function Oshxona() {
   }, []);
   return (
     <div>
-      {/* <Navbar /> */}
       <div className={styles.bolalar}>
         <p className={styles.ttl}>Oshxona mebellari</p>
         <div className={styles.cnt}>
@@ -38,7 +37,6 @@ export default function Oshxona() {
         <Malumot />
         <RasmlarPastki />
       </div>
-      {/* <Footer /> */}
     </div>
   );
 }

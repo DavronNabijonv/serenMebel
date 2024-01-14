@@ -17,7 +17,6 @@ export default function OshxonaOraliq() {
 
   return (
     <div>
-      {/* <Navbar /> */}
       <div className={styles.oraliqo}>
         <div className={styles.oraliq_grp}>
           <img src={b1} alt="hi_tech" />
@@ -41,7 +40,6 @@ export default function OshxonaOraliq() {
           </NavLink>
         </div>
       </div>
-      {/* <Footer /> */}
     </div>
   );
 }

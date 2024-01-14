@@ -2,8 +2,10 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./layout/navbar";
 import Footer from "./layout/footer";
 import { routes } from "./layout/routeConfig";
+import { useEffect } from "react";
 
 function App() {
+  useEffect(()=>{window.location.reload();},[])
   return (
     <>
       <Navbar

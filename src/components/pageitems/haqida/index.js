@@ -11,7 +11,7 @@ export default function Haqida() {
       <div className={styles.f1}>
         <img src={deco1} />
         <div className={styles.txtgrp}>
-          <p className={styles.ttl}>О КОМПАНИИ</p>
+          <p className={styles.ttl}>{t("haqida")}</p>
           <p className={styles.txt}>{t("p1")}</p>
           <img src={deco1} />
           <p className={styles.txt}>{t("p2")}</p>

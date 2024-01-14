@@ -29,7 +29,7 @@ export default function MahsulotlarSwiper() {
   const { t } = useTranslation();
   return (
     <div className="swipergrp">
-      <p className="ttl">Наша продукция</p>
+      <p className="ttl">{t("b_mahsulot")}</p>
       <div className="swgrp">
         <Swiper
           spaceBetween={0}
@@ -40,17 +40,6 @@ export default function MahsulotlarSwiper() {
           modules={[Pagination, Navigation]}
           className="mySwiper"
         >
-          {/* {mahsulot.map((r) => (
-            <SwiperSlide>
-              <div className="mgrp" key={r.id}>
-                <img src={r.img} alt={r.ttl} />
-                <p>{r.ttl}</p>
-                <NavLink to={r.path}>
-                  <button>Подробное</button>
-                </NavLink>
-              </div>
-            </SwiperSlide>
-          ))} */}
           <SwiperSlide>
             <div className="mgrp" key="1">
               <img src={m2} alt="oshxona mebel" />

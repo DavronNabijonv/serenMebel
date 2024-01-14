@@ -28,7 +28,7 @@ export default function Aloqa() {
             <IoMdMail /> Sardorusmon111@gmail.com
           </p>
           <p className={styles.tel}>
-            <FaLocationDot /> Manzilga Toshkent shahar Yashnabod tumani Olmos
+            <FaLocationDot />Toshkent shahar Yashnabod tumani Olmos
             mahallasi Yakkatol 3-tor ko`chasi 38 uy
           </p>
         </div>

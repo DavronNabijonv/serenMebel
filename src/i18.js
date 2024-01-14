@@ -66,11 +66,12 @@ i18n.use(initReactI18next).init({
         btn: "ОСТАВИТЬ ЗАЯВКУ",
         tash: "© Организация СеренМебель serenmebel.uz",
         pod: "Подробное",
+        tarmoq_ttl:"Подпишитесь на нашу рассылку",
       },
     },
     uz: {
       translation: {
-        haqida: "Haqida",
+        haqida: "Kampaniya haqida",
         mahsulot: "Mahsulotlar",
         xizmat: "Xizmatlar",
         contact: "Aloqa",
@@ -130,6 +131,7 @@ i18n.use(initReactI18next).init({
         btn: "Jo`natish",
         tash: "© SerenMebel tashkiloti serenmebel.uz",
         pod: "Batafsil",
+        tarmoq_ttl:"Bizni ijtimoiy tarmoqlarda kuzatib  boring",
       },
     },
   },

@@ -60,9 +60,7 @@ function Malumot() {
   const { t } = useTranslation();
   return (
     <div className={styles.malumot}>
-      <p className={styles.ittl}>
-        Почему стоит купить пассажирский лифт в компании Shamollift
-      </p>
+      <p className={styles.ittl}>{t("olish_sabab")}</p>
       <div className={styles.fgrp}>
         <div className={styles.grp}>
           <SiAntdesign />

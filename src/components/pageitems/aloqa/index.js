@@ -3,22 +3,24 @@ import styles from "./index.module.scss";
 import { FaArrowRightLong, FaLocationDot } from "react-icons/fa6";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
+import { useTranslation } from "react-i18next";
 
 export default function Aloqa() {
+  const {t} = useTranslation();
   return (
     <div className={styles.aloqa}>
       <div className={styles.container}>
         <div className={styles.f1}>
-          <p className={styles.ttl}>Связаться с нами</p>
+          <p className={styles.ttl}>{t("aloqa")}</p>
           <form>
             <p className={styles.fttl}>
-              Номер телефона <span>*</span>
+            {t("tel")} <span>*</span>
             </p>
-            <input type="text" placeholder="Номер телефона" />
-            <p className={styles.fttl}>Сообщение</p>
-            <textarea placeholder="Сообщение" />
+            <input type="text" placeholder={t("tel")} />
+            <p className={styles.fttl}>{t("sms")}</p>
+            <textarea placeholder={t("sms")} />
             <button className={styles.btn}>
-              ОСТАВИТЬ ЗАЯВКУ <FaArrowRightLong />
+            {t("btn")}<FaArrowRightLong />
             </button>
           </form>
           <p className={styles.tel}>

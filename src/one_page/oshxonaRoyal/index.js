@@ -61,7 +61,7 @@ function Malumot() {
   return (
     <div className={styles.malumot}>
       <p className={styles.ittl}>
-        Почему стоит купить пассажирский лифт в компании Shamollift
+      {t("olish_sabab")}
       </p>
       <div className={styles.fgrp}>
         <div className={styles.grp}>

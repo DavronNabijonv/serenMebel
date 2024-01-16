@@ -5,7 +5,7 @@ import { routes } from "./layout/routeConfig";
 import { useEffect } from "react";
 
 function App() {
-  useEffect(()=>{window.location.reload();},[])
+  // useEffect(()=>{window.reload()},[])
   return (
     <>
       <Navbar

@@ -22,7 +22,7 @@ export default function Ofis() {
   return (
     <div>
       <div className={styles.bolalar}>
-        <p className={styles.ttl}>Ofis mebellari</p>
+        <p className={styles.ttl}>{t("m3")}</p>
         <div className={styles.cnt}>
           <div className={styles.imgs}>
             <img src={b1} />

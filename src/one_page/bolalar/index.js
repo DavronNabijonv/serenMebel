@@ -22,7 +22,7 @@ export default function Bolalar() {
   return (
     <div>
       <div className={styles.bolalar}>
-        <p className={styles.ttl}>Bolalar mebellari</p>
+        <p className={styles.ttl}>{t("m7")}</p>
         <div className={styles.cnt}>
           <div className={styles.imgs}>
             <img src={b1} />

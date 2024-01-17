@@ -22,7 +22,7 @@ export default function KirishMebel() {
   return (
     <div>
       <div className={styles.bolalar}>
-        <p className={styles.ttl}>Kirish va Shkaf mebellari</p>
+        <p className={styles.ttl}>{t("m2")}</p>
         <div className={styles.cnt}>
           <div className={styles.imgs}>
             <img src={b1} />

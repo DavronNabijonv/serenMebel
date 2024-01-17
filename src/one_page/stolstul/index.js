@@ -22,7 +22,7 @@ export default function Stol() {
   return (
     <div>
       <div className={styles.bolalar}>
-        <p className={styles.ttl}>Ayvon va Zal mebellari</p>
+        <p className={styles.ttl}>{t("m5")}</p>
         <div className={styles.cnt}>
           <div className={styles.imgs}>
             <img src={b1} />

@@ -22,7 +22,7 @@ export default function OshxonaRoyal() {
   return (
     <div>
       <div className={styles.bolalar}>
-        <p className={styles.ttl}>Oshxona mebellari</p>
+        <p className={styles.ttl}>{t("m1")}</p>
         <div className={styles.cnt}>
           <div className={styles.imgs}>
             <img src={b1} />

@@ -22,7 +22,7 @@ export default function Yumshoq() {
   return (
     <div>
       <div className={styles.bolalar}>
-        <p className={styles.ttl}>Yumshoq mebellari</p>
+        <p className={styles.ttl}>{t("m4")}</p>
         <div className={styles.cnt}>
           <div className={styles.imgs}>
             <img src={b1} />

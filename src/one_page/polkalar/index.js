@@ -22,7 +22,7 @@ export default function Polkalar() {
   return (
     <div>
       <div className={styles.bolalar}>
-        <p className={styles.ttl}>Polkalar va Stellaj mebellari</p>
+        <p className={styles.ttl}>{t("m8")}</p>
         <div className={styles.cnt}>
           <div className={styles.imgs}>
             <img src={b1} />

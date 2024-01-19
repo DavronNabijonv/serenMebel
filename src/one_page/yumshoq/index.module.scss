@@ -198,20 +198,20 @@
 
 .rasmlar{
     display: flex;
-    flex-direction: column;
-    gap: 5vw;
+    gap: 2vw;
     padding-bottom: 7vw;
+    flex-wrap: wrap;
     .rasm_grp1{
-        width: 90%;
+        width: 40%;
         margin: auto;
         text-align: center;
-        padding: 4vw 0 2vw 0;
+        padding: 2vw 0 0 0;
         border-radius: 3vw;
         border: 0.18vw solid white;
         img{
             width: 95%;
             margin: auto;
-            height: 50vw;
+            height: 25vw;
         }
         p{
             width: 90%;
@@ -226,11 +226,24 @@
     }
 }
 
-@media(max-width:768px){
+@media(max-width:1000px){
     .rasmlar{
         .rasm_grp1{
+            width: 80%;
             img{
-                height: 70vw;
+                height: 40vw;
+            }
+        }
+    }
+}
+
+@media(max-width:768px){
+    .rasmlar{
+        gap: 8vw;
+        .rasm_grp1{
+            padding: 5vw 0 2vw 0;
+            img{
+                height: 55vw;
             }
             p{
                 font-size: 4vw;

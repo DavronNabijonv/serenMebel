@@ -1,6 +1,4 @@
 import React, { useEffect } from "react";
-import Navbar from "../../layout/navbar";
-import Footer from "../../layout/footer";
 import styles from "./index.module.scss";
 import b1 from "../../assets/images/seren/ayvon va zal/klassik/image10.jpg";
 import b2 from "../../assets/images/seren/ayvon va zal/klassik/image12.webp";

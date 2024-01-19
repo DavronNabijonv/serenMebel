@@ -33,7 +33,7 @@ export default function Rasmlar() {
     <div className={styles.rasm}>
       <p className={styles.ttl}>Те кто доверял нам</p>
       <div className={styles.grp}>
-        <div className={innerWidth < 600 ? styles.one : styles.grp1}>
+        <div className={styles.grp1}>
           <Scale>
             <img src={toshekntcity} className={styles.img} />
           </Scale>
@@ -43,11 +43,8 @@ export default function Rasmlar() {
           <Scale>
             <img src={evos} className={styles.img} />
           </Scale>
-          <Scale>
-            <img src={havas} className={styles.img} />
-          </Scale>
         </div>
-        <div className={innerWidth < 600 ? styles.one : styles.grp1}>
+        <div className={styles.grp1}>
           <Scale>
             <img src={karzinka} className={styles.img} />
           </Scale>
@@ -58,7 +55,7 @@ export default function Rasmlar() {
             <img src={nrg} className={styles.img} />
           </Scale>
         </div>
-        <div className={innerWidth < 600 ? styles.one : styles.grp1}>
+        <div className={styles.grp1}>
           <Scale>
             <img src={pepsi} className={styles.img} />
           </Scale>
@@ -70,10 +67,55 @@ export default function Rasmlar() {
           </Scale>
         </div>
       </div>
+      <div className={styles.foot}>
+        <Scale>
+          <img src={zoodmoll} className={styles.zoodmall} />
+        </Scale>
+        <Scale>
+          <img src={havas} className={styles.havas} />
+        </Scale>
+      </div>
+      {innerWidth<605&&<Rasm2/>}
+    </div>
+  );
+}
+
+function Rasm2() {
+  return (
+    <div className={styles.mobile_rasm}>
       <Scale>
-        <img src={zoodmoll} className={styles.zoodmall} />
+        <img src={toshekntcity} className={styles.img} />
       </Scale>
-      {/* <button onClick={()=>{setTog(!tog)}}>Ko`proq ko`rish</button> */}
+      <Scale>
+        <img src={ecobozor} className={styles.img} />
+      </Scale>
+      <Scale>
+        <img src={evos} className={styles.img} />
+      </Scale>
+      <Scale>
+        <img src={karzinka} className={styles.img} />
+      </Scale>
+      <Scale>
+        <img src={pepsi} className={styles.img} />
+      </Scale>
+      <Scale>
+        <img src={texnopark} className={styles.img} />
+      </Scale>
+      <Scale>
+        <img src={itpark} className={styles.img} />
+      </Scale>
+      <Scale>
+        <img src={artel} className={styles.img} />
+      </Scale>
+      <Scale>
+        <img src={nrg} className={styles.img} />
+      </Scale>
+      <Scale>
+        <img src={zoodmoll} className={styles.img} />
+      </Scale>
+      <Scale>
+        <img src={havas} className={styles.img} />
+      </Scale>
     </div>
   );
 }

@@ -1,10 +1,8 @@
 import React, { useEffect } from "react";
-import Navbar from "../../layout/navbar";
-import Footer from "../../layout/footer";
 import styles from "./index.module.scss";
-import b1 from "../../assets/images/m8.jpg";
+import b1 from "../../assets/images/seren/ayvon va zal/hi tech/image10.jpg";
 import b2 from "../../assets/images/seren/ayvon va zal/hi tech/image1.jpg";
-import b3 from "../../assets/images/m12.jpg";
+import b3 from "../../assets/images/seren/ayvon va zal/hi tech/image11.jpg";
 import b4 from "../../assets/images/seren/ayvon va zal/hi tech/image13.jpg";
 import { imagesZalHi_tech } from "../../components/db/mahsulotlar";
 import { useTranslation } from "react-i18next";

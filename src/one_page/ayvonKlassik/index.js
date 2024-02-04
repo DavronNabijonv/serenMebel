@@ -1,5 +1,6 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./index.module.scss";
+import stylesb from '../bolalar/index.module.scss'
 import b1 from "../../assets/images/seren/ayvon va zal/klassik/image10.jpg";
 import b2 from "../../assets/images/seren/ayvon va zal/klassik/image12.webp";
 import b3 from "../../assets/images/seren/ayvon va zal/klassik/image14.jpg";
@@ -10,6 +11,7 @@ import { SiAntdesign } from "react-icons/si";
 import { GrTechnology } from "react-icons/gr";
 import { DiMaterializecss } from "react-icons/di";
 import { FaFileContract } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 export default function AyvonKlassik() {
   const { t } = useTranslation();
@@ -40,12 +42,20 @@ export default function AyvonKlassik() {
 }
 
 function RasmlarPastki() {
+  const { t } = useTranslation();
+  const [tag1, setTag1] = useState("imagesZalKlassik");
   return (
-    <div className={styles.rasmlar}>
-      {imagesZalKlassik.map((r) => (
-        <div className={styles.rasm_grp1}>
+    <div className={stylesb.rasmlar}>
+      {imagesZalKlassik.map((r, index) => (
+        <div className={stylesb.rasm_grp1}>
           <img src={r.img} alt="rasm" />
           <p>{r.ttl}</p>
+          <button>{t("pod")}</button>
+          <Link to={`/items/:${tag1}/:${index}`}>
+            <div className={stylesb.hover_effect}>
+              <button>{t("pod")}</button>
+            </div>
+          </Link>
         </div>
       ))}
     </div>
@@ -56,24 +66,22 @@ function Malumot() {
   const { t } = useTranslation();
   return (
     <div className={styles.malumot}>
-      <p className={styles.ittl}>
-        {t("olish_sabab")}
-      </p>
+      <p className={styles.ittl}>{t("olish_sabab")}</p>
       <div className={styles.fgrp}>
         <div className={styles.grp}>
-          <SiAntdesign/>
+          <SiAntdesign />
           <p className={styles.txt}>{t("x_txt1")}</p>
         </div>
         <div className={styles.grp}>
-          <GrTechnology/>
+          <GrTechnology />
           <p className={styles.txt}>{t("x_txt5")}</p>
         </div>
         <div className={styles.grp}>
-          <DiMaterializecss/>
+          <DiMaterializecss />
           <p className={styles.txt}>{t("x_txt8")}</p>
         </div>
         <div className={styles.grp}>
-          <FaFileContract/>
+          <FaFileContract />
           <p className={styles.txt}>{t("x_txt11")}</p>
         </div>
       </div>

@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import stylesb from '../bolalar/index.module.scss'
 import styles from "./index.module.scss";
 import b1 from "../../assets/images/seren/ayvon va zal/hi tech/image10.jpg";
 import b2 from "../../assets/images/seren/ayvon va zal/hi tech/image1.jpg";
@@ -10,6 +11,7 @@ import { SiAntdesign } from "react-icons/si";
 import { GrTechnology } from "react-icons/gr";
 import { DiMaterializecss } from "react-icons/di";
 import { FaFileContract } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 export default function Stol() {
   const { t } = useTranslation();
@@ -40,12 +42,20 @@ export default function Stol() {
 }
 
 function RasmlarPastki() {
+  const {t} = useTranslation();
+  const [tag9,setTag9] = useState('imagesZalHi_tech');
   return (
-    <div className={styles.rasmlar}>
-      {imagesZalHi_tech.map((r) => (
-        <div className={styles.rasm_grp1}>
+    <div className={stylesb.rasmlar}>
+      {imagesZalHi_tech.map((r,index) => (
+        <div className={stylesb.rasm_grp1}>
           <img src={r.img} alt="rasm" />
           <p>{r.ttl}</p>
+          <button>{t("pod")}</button>
+          <Link to={`/items/:${tag9}/:${index}`}>
+            <div className={stylesb.hover_effect}>
+              <button>{t("pod")}</button>
+            </div>
+          </Link>
         </div>
       ))}
     </div>

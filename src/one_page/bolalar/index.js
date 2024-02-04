@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../../layout/navbar";
 import Footer from "../../layout/footer";
 import styles from "./index.module.scss";
@@ -12,6 +12,7 @@ import { SiAntdesign } from "react-icons/si";
 import { GrTechnology } from "react-icons/gr";
 import { DiMaterializecss } from "react-icons/di";
 import { FaFileContract } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 export default function Bolalar() {
   const { t } = useTranslation();
@@ -42,12 +43,20 @@ export default function Bolalar() {
 }
 
 function RasmlarPastki() {
+  const { t } = useTranslation();
+  const [tag, setTag] = useState("imagesBolalar");
   return (
     <div className={styles.rasmlar}>
-      {imagesBolalar.map((r) => (
-        <div className={styles.rasm_grp1}>
+      {imagesBolalar.map((r, index) => (
+        <div className={styles.rasm_grp1} key={index}>
           <img src={r.img} alt="rasm" />
           <p>{r.ttl}</p>
+          <button>{t("pod")}</button>
+          <Link to={`/items/:${tag}/:${index}`}>
+            <div className={styles.hover_effect}>
+              <button>{t("pod")}</button>
+            </div>
+          </Link>
         </div>
       ))}
     </div>
@@ -58,9 +67,7 @@ function Malumot() {
   const { t } = useTranslation();
   return (
     <div className={styles.malumot}>
-      <p className={styles.ittl}>
-      {t("olish_sabab")}
-      </p>
+      <p className={styles.ittl}>{t("olish_sabab")}</p>
       <div className={styles.fgrp}>
         <div className={styles.grp}>
           <SiAntdesign />

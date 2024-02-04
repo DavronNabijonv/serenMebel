@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
-import Navbar from "../../layout/navbar";
-import Footer from "../../layout/footer";
+import React, { useEffect, useState } from "react";
+import stylesb from '../bolalar/index.module.scss'
 import styles from "./index.module.scss";
 import b1 from "../../assets/images/m3.jpg";
 import b3 from "../../assets/images/m11.jpg";
@@ -12,6 +11,7 @@ import { SiAntdesign } from "react-icons/si";
 import { GrTechnology } from "react-icons/gr";
 import { DiMaterializecss } from "react-icons/di";
 import { FaFileContract } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 export default function KirishMebel() {
   const { t } = useTranslation();
@@ -42,12 +42,20 @@ export default function KirishMebel() {
 }
 
 function RasmlarPastki() {
+  const { t } = useTranslation();
+  const [tag2, setTag2] = useState("imagesShkaf");
   return (
-    <div className={styles.rasmlar}>
-      {imagesShkaf.map((r) => (
-        <div className={styles.rasm_grp1}>
+    <div className={stylesb.rasmlar}>
+      {imagesShkaf.map((r, index) => (
+        <div className={stylesb.rasm_grp1}>
           <img src={r.img} alt="rasm" />
           <p>{r.ttl}</p>
+          <button>{t("pod")}</button>
+          <Link to={`/items/:${tag2}/:${index}`}>
+            <div className={stylesb.hover_effect}>
+              <button>{t("pod")}</button>
+            </div>
+          </Link>
         </div>
       ))}
     </div>
@@ -58,9 +66,7 @@ function Malumot() {
   const { t } = useTranslation();
   return (
     <div className={styles.malumot}>
-      <p className={styles.ittl}>
-      {t("olish_sabab")}
-      </p>
+      <p className={styles.ittl}>{t("olish_sabab")}</p>
       <div className={styles.fgrp}>
         <div className={styles.grp}>
           <SiAntdesign />

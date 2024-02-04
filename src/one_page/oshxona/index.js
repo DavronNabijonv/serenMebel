@@ -1,7 +1,6 @@
-import React, { useEffect } from "react";
-import Navbar from "../../layout/navbar";
-import Footer from "../../layout/footer";
+import React, { useEffect, useState } from "react";
 import styles from "./index.module.scss";
+import stylesb from '../bolalar/index.module.scss'
 import b1 from "../../assets/images/seren/oshxona/HI-TECH/316.jpg";
 import b2 from "../../assets/images/seren/oshxona/HI-TECH/13.jpg";
 import b3 from "../../assets/images/seren/oshxona/HI-TECH/3.jpg";
@@ -12,6 +11,7 @@ import { SiAntdesign } from "react-icons/si";
 import { GrTechnology } from "react-icons/gr";
 import { DiMaterializecss } from "react-icons/di";
 import { FaFileContract } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 export default function Oshxona() {
   const { t } = useTranslation();
@@ -42,12 +42,20 @@ export default function Oshxona() {
 }
 
 function RasmlarPastki() {
+  const { t } = useTranslation();
+  const [tag4, setTag4] = useState("imagesHitech");
   return (
-    <div className={styles.rasmlar}>
-      {imagesHitech.map((r) => (
-        <div className={styles.rasm_grp1}>
+    <div className={stylesb.rasmlar}>
+      {imagesHitech.map((r, index) => (
+        <div className={stylesb.rasm_grp1}>
           <img src={r.img} alt="rasm" />
           <p>{r.ttl}</p>
+          <button>{t("pod")}</button>
+          <Link to={`/items/:${tag4}/:${index}`}>
+            <div className={stylesb.hover_effect}>
+              <button>{t("pod")}</button>
+            </div>
+          </Link>
         </div>
       ))}
     </div>
@@ -58,9 +66,7 @@ function Malumot() {
   const { t } = useTranslation();
   return (
     <div className={styles.malumot}>
-      <p className={styles.ittl}>
-      {t("olish_sabab")}
-      </p>
+      <p className={styles.ittl}>{t("olish_sabab")}</p>
       <div className={styles.fgrp}>
         <div className={styles.grp}>
           <SiAntdesign />

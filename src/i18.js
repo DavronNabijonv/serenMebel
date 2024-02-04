@@ -9,7 +9,8 @@ i18n
   .use(LanguageDetector)
   .use(HttpApi)
   .init({
-    lng: "uz", // default language
+    fallbackLng: "uz", // default language
+    order: ['querystring', 'cookie', 'localStorage', 'sessionStorage', 'navigator', 'htmlTag', 'path', 'subdomain'],
     backend: {
       loadPath: "/translationWords/{{lng}}/{{ns}}.json",
     },

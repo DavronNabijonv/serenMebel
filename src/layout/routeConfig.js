@@ -13,6 +13,8 @@ import Stol from "../one_page/stolstul";
 import Yotoqxona from "../one_page/yotoqxona";
 import Yumshoq from "../one_page/yumshoq";
 import MainPage from "../one_page";
+import Image_build from "../build_image/image_build";
+import Info_image from "../one_page/info_image/info_image";
 
 export const routes = [
   {
@@ -89,5 +91,15 @@ export const routes = [
     id: 15,
     path: "/stolst",
     element: <Stolst />,
+  },
+  {
+    id: 16,
+    path: "/b_image",
+    element: <Image_build />,
+  },
+  {
+    id: 17,
+    path: "/items/:name/:id",
+    element: <Info_image />,
   },
 ];

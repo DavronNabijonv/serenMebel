@@ -1,6 +1,4 @@
 import React, { useEffect } from "react";
-import Navbar from "../../../layout/navbar";
-import Footer from "../../../layout/footer";
 import styles from "./index.module.scss";
 import { NavLink } from "react-router-dom";
 import b1 from "../../../assets/images/seren/ayvon va zal/hi tech/image15.jpg";

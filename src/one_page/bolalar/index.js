@@ -52,7 +52,7 @@ function RasmlarPastki() {
           <img src={r.img} alt="rasm" />
           <p>{r.ttl}</p>
           <button>{t("pod")}</button>
-          <Link to={`/items/:${tag}/:${index}`}>
+          <Link to={`/items/${tag}/${index}`}>
             <div className={styles.hover_effect}>
               <button>{t("pod")}</button>
             </div>

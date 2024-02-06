@@ -51,10 +51,16 @@ export default function Info_image() {
             <div className="info_image_grp">
               <img src={r.img} />
               <div className="info_in_grp">
-                <p className="infoimg_ttl">{r.ttl}</p>
-                <p className="infoimg_davlat">{r.davlat} mahsuloti</p>
-                <p className="infoimg_text">{r.text}</p>
-                <p className="infoimg_narxi">Narxi: {r.narxi}</p>
+                <p className="infoimg_ttl"> {r.ttl}</p>
+                <p className="infoimg_davlat"><span>Ishlab chiqaruvchi mamlakat:</span> {r.davlat}</p>
+                <p className="infoimg_uzunlik"><span>Uzunlik:</span> {r.uzunlik}</p>
+                <p className="infoimg_uzunlik"><span>Kenglik:</span> {r.kenglik}</p>
+                <p className="infoimg_uzunlik"><span>O`rindiq chuqurligi:</span> {r.chuqurligi}</p>
+                <p className="infoimg_uzunlik"><span>Orqa balandlik:</span> {r.orqa_balandlik}</p>
+                <p className="infoimg_uzunlik"><span>Erdan balandlik:</span> {r.balandlik}</p>
+                <p className="infoimg_uzunlik"><span>Kafolat:</span> {r.kafolat}</p>
+                <p className="infoimg_uzunlik"><span>Muddat:</span> {r.muddati}</p>
+                <p className="infoimg_narxi"><span>Narxi:</span> {r.narxi}</p>
               </div>
             </div>
           );

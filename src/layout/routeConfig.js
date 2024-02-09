@@ -15,11 +15,12 @@ import Yumshoq from "../one_page/yumshoq";
 import MainPage from "../one_page";
 import Image_build from "../build_image/image_build";
 import Info_image from "../one_page/info_image/info_image";
+import Account from "../account/account";
 
 export const routes = [
   {
     id: 1,
-    path: "/",
+    path: "/ni",
     element: <MainPage />,
   },
   {
@@ -101,5 +102,10 @@ export const routes = [
     id: 17,
     path: "/items/:name/:id",
     element: <Info_image />,
+  },
+  {
+    id: 18,
+    path: "/",
+    element: <Account/>,
   },
 ];

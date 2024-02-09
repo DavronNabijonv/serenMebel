@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./account.scss";
 import img1 from "../assets/images/seren/bolalar/image1.jpg";
 import { FaShoppingCart, FaTruck } from "react-icons/fa";
@@ -6,28 +6,41 @@ import { FaShoppingCart, FaTruck } from "react-icons/fa";
 export default function Account() {
   const [tan, setTan] = useState(false);
   const [buy, setBuy] = useState(true);
+  const [innerWidth, setInnerWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setInnerWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <div className="account">
       <div className="nav_grp">
         <p
-          className={buy&&"buy"}
+          className={buy && "buy"}
           onClick={() => {
             setBuy(true);
             setTan(false);
           }}
         >
           <FaTruck />
-          Buyurtmalar
+          {innerWidth>525&&"Buyurtmalar"}
         </p>
         <p
-          className={tan&&"buy"}
+          className={tan && "buy"}
           onClick={() => {
             setBuy(false);
             setTan(true);
           }}
         >
           <FaShoppingCart />
-          Tanlanganlar
+          {innerWidth>525&&"Tanlanganlar"}
         </p>
         <p className="name">Nabijonov Davron</p>
       </div>

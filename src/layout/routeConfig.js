@@ -95,7 +95,7 @@ export const routes = [
   },
   {
     id: 16,
-    path: "/b_image",
+    path: "/",
     element: <Image_build />,
   },
   {
@@ -105,7 +105,7 @@ export const routes = [
   },
   {
     id: 18,
-    path: "/",
+    path: "/account",
     element: <Account/>,
   },
 ];

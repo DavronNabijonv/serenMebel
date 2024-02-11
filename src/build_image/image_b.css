@@ -1,0 +1,81 @@
+.img {
+  width: 100%;
+  height: auto;
+}
+
+.swiper {
+  width: 80%;
+  margin: auto;
+}
+
+.swiper-button-prev {
+  color: black;
+  font-size: 10px;
+  border-radius: 100%;
+  padding: 10px 20px;
+  border: 2px solid black;
+  text-align: center;
+}
+
+.swiper-button-prev::after {
+  font-size: 20px;
+  text-align: center;
+}
+
+.swiper-button-next {
+  color: black;
+  font-size: 10px;
+  border-radius: 100%;
+  padding: 10px 20px;
+  border: 2px solid black;
+  text-align: center;
+}
+
+.swiper-button-next::after {
+  font-size: 20px;
+  text-align: center;
+}
+
+@media(max-width:1024px){
+    .swiper{
+        width: 90%;
+    }
+}
+
+@media(max-width:768px){
+    .swiper{
+        width: 95%;
+    }
+
+    .swiper-button-prev {
+        padding: 0px 0px;
+        text-align: center;
+        height: 30px;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        margin-top: -15px;
+      }
+      
+      .swiper-button-prev::after {
+        font-size: 10px;
+        font-weight: 700;
+        text-align: center;
+      }
+      
+      .swiper-button-next {
+        padding: 0px 0px;
+        text-align: center;
+        height: 30px;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        margin-top: -15px;
+      }
+      
+      .swiper-button-next::after {
+        font-size: 10px;
+        font-weight: 700;
+        text-align: center;
+      }
+}

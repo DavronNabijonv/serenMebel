@@ -32,7 +32,7 @@
       }
       .change_image {
         mix-blend-mode: color-dodge;
-        opacity: 0.8;
+        opacity: 1;
       }
       .main_image {
         width: 100%;
@@ -65,22 +65,28 @@
   }
 }
 
-
 @media (max-width: 768px) {
-    .img_build {
-      display: flex;
+  .img_build {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 900px;
+    .b_color_change {
       flex-direction: column;
-      gap: 20px;
-      .b_color_change {
-        flex-direction: column;
-        gap: 30px;
-        .change_input {
-          margin-left: 0px;
-          width: 100px;
-        }
-        .for_build {
-          width: 95%;
-        }
+      gap: 30px;
+      .change_input {
+        margin-left: 0px;
+        width: 100px;
+      }
+      .for_build {
+        width: 95%;
       }
     }
   }
+}
+
+@media (max-width: 620px) {
+  .img_build{
+  height: 700px;
+  }
+}

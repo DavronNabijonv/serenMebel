@@ -20,7 +20,7 @@ import Account from "../account/account";
 export const routes = [
   {
     id: 1,
-    path: "/ni",
+    path: "/",
     element: <MainPage />,
   },
   {
@@ -95,7 +95,7 @@ export const routes = [
   },
   {
     id: 16,
-    path: "/",
+    path: "/build",
     element: <Image_build />,
   },
   {

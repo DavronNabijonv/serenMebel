@@ -42,6 +42,12 @@
         margin-top: 1vw;
         margin-right: 1vw;
       }
+      .signin{
+        display: none;
+        color: #cdcbcb;
+        font-size: 2.5vw;
+        margin-left: 0;
+      }
       .alone {
         display: flex;
         letter-spacing: 2vw;
@@ -73,6 +79,10 @@
       display: flex;
       align-items: center;
       gap: 2.5vw;
+      .signin{
+        color: #cdcbcb;
+        font-size: 2.5vw;
+      }
       a {
         color: #fff;
         font-family: "Inter", sans-serif;
@@ -120,6 +130,11 @@
         width: 100%;
         justify-content: space-between;
         align-items: center;
+        gap: 5vw;
+        .signin{
+          display: flex;
+          font-size: 4vw;
+        }
         .changelang{
           margin-right: 2vw;
         }
@@ -145,6 +160,9 @@
         align-items: flex-start;
         display: none;
         transition: display 1s ease-in;
+        .signin{
+          display: none;
+        }
         a {
           font-size: 18px;
           button {
@@ -160,6 +178,9 @@
   .navbar{
     .main{
       .responsive{
+        .signin{
+          font-size: 6vw;
+        }
         .changelang{
         margin-top: 2vw;
         }
@@ -220,6 +241,9 @@
   .navbar{
     .main{
       .responsive{
+        .signin{
+          font-size: 8vw;
+        }
         .alone{
           gap: 7vw;
           img{

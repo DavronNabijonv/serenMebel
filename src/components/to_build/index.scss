@@ -1,0 +1,70 @@
+@import url(../../style/index.scss);
+
+.tobuild {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 50px 0;
+  background-color: #282828;
+  .t_grp {
+    border: 2px solid #fff;
+    padding: 50px;
+    border-radius: 16px;
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+    align-items: center;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    button {
+      width: 40vw;
+      display: flex;
+      padding: 1.5vw 0;
+      justify-content: center;
+      align-items: center;
+      gap: 1vw;
+      align-self: stretch;
+      color: #111;
+      font-family: "Inter";
+      font-size: 3vw;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 140%; /* 25.2px */
+      letter-spacing: 0.08vw;
+      border-radius: 0.8vw;
+      margin-top: 1vw;
+      background: linear-gradient(
+        140deg,
+        #5c5c5c 1.86%,
+        #cdcbcb 44.24%,
+        #5c5c5c 96.52%
+      );
+    }
+  }
+}
+
+@media(max-width:1050px){
+    .tobuild{
+        .t_grp{
+            padding: 2vw;
+            width: 80%;
+        }
+    }
+}
+
+@media(max-width:600px){
+    .tobuild{
+        .t_grp{
+            width: 90%;
+            padding: 4vw;
+            gap: 30px;
+            button{
+                font-size: 5vw;
+                width: 60vw;
+            }
+        }
+    }
+}

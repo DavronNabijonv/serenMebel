@@ -14,6 +14,7 @@ import XizmatSwiper from "../components/xizmatswiper";
 import { Element, animateScroll as scroll, scrollSpy } from "react-scroll";
 import { Route, Routes } from "react-router-dom";
 import { routes } from "../layout/routeConfig";
+import To_Build from "../components/to_build";
 
 export default function MainPage() {
   const [innerWidth, setInnerWidth] = useState(window.innerWidth);
@@ -41,6 +42,7 @@ export default function MainPage() {
         <Element name="mahsulot">
           {innerWidth < 600 ? <MahsulotlarSwiper /> : <Mahsulotlar />}
         </Element>
+        <To_Build />
         <Element name="xizmat">
           {innerWidth < 600 ? <XizmatSwiper /> : <Xizmatlar />}
         </Element>

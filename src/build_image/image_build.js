@@ -17,11 +17,13 @@ import b2 from "../assets/images/create_image/4.jpg";
 import b3 from "../assets/images/create_image/5.jpg";
 import b4 from "../assets/images/create_image/6.jpg";
 import b5 from "../assets/images/create_image/7.jpg";
+import oq from "../assets/images/white.jpg";
 
 export default function Image_build() {
   const [n_img, setN_img] = useState(b1);
   const [build, setBuild] = useState(i1);
-  const [backgroundColor, setBackgroundColor] = useState("#ffffff"); // Initial background color
+  const [ga,setGa] = useState(false);
+  const [backgroundColor, setBackgroundColor] = useState("#282828"); // Initial background color
 
   const handleColorChange = (event) => {
     setBackgroundColor(event.target.value); // Update background color when user selects a new color
@@ -34,18 +36,19 @@ export default function Image_build() {
           value={backgroundColor}
           onChange={handleColorChange}
           className={styles.change_input}
+          onClick={()=>{setN_img(oq);setGa(true)}}
         />
-        <div className={styles.for_build} style={{backgroundColor:`${backgroundColor}`}}>
-          <img src={n_img} className={styles.change_image} />
+        <div className={styles.for_build} style={ga?{backgroundColor:`${backgroundColor}`}:{}}>
+          <img src={n_img} className={ga&&styles.change_image} />
           <img src={build} className={styles.main_image} />
         </div>
       </div>
       <Image_Slider
-        setB1={() => setN_img(b1)}
-        setB2={() => setN_img(b2)}
-        setB3={() => setN_img(b3)}
-        setB4={() => setN_img(b4)}
-        setB5={() => setN_img(b5)}
+        setB1={() => {setN_img(b1);setGa(false)}}
+        setB2={() => {setN_img(b2);setGa(false)}}
+        setB3={() => {setN_img(b3);setGa(false)}}
+        setB4={() => {setN_img(b4);setGa(false)}}
+        setB5={() => {setN_img(b5);setGa(false)}}
       />
     </div>
   );

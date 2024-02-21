@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 import ChangeLanguage from "../../lang_select";
 import { Link } from "react-scroll";
 import { NavLink } from "react-router-dom";
+import { RiAccountCircleLine } from "react-icons/ri";
 
 export default function Navbar(props) {
   const [toggle, setToggle] = useState(false);
@@ -19,7 +20,7 @@ export default function Navbar(props) {
     <div className={styles.navbar}>
       <div className={styles.main}>
         <div className={styles.responsive}>
-          <NavLink to={"/"}>
+          <NavLink to="/">
             <a className={styles.alone}>
               <img src={logo} />
               SerenMebel
@@ -31,6 +32,11 @@ export default function Navbar(props) {
               setToggle(!toggle);
             }}
           />
+          <NavLink to={"/account"}>
+            <div className={styles.signin}>
+              <RiAccountCircleLine />
+            </div>
+          </NavLink>
           <div className={styles.changelang}>
             <ChangeLanguage />
           </div>
@@ -96,6 +102,11 @@ export default function Navbar(props) {
               <button>{t("contact")}</button>
             </a>
           </Link>
+          <NavLink to={"/account"}>
+            <div className={styles.signin}>
+              <RiAccountCircleLine />
+            </div>
+          </NavLink>
         </div>
       </div>
       <div

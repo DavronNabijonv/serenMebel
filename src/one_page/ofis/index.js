@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "./index.module.scss";
-import stylesb from '../bolalar/index.module.scss'
+import stylesb from "../bolalar/index.module.scss";
 import b1 from "../../assets/images/seren/ofis/image21.webp";
 import b2 from "../../assets/images/seren/ofis/image13.jpg";
 import b3 from "../../assets/images/seren/ofis/image15.jpg";
@@ -11,14 +11,34 @@ import { SiAntdesign } from "react-icons/si";
 import { GrTechnology } from "react-icons/gr";
 import { DiMaterializecss } from "react-icons/di";
 import { FaFileContract } from "react-icons/fa6";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 export default function Ofis() {
   const { t } = useTranslation();
+  const { furniture_id } = useParams();
+  const furniture_url_by_index =
+    "https://selenmebelapi20240307024627.azurewebsites.net/api/Furnitures/";
+  const [furnitureArray, setFurnitureArray] = useState([]);
+
   useEffect(() => {
     // Scroll to the top of the page when the component mounts
     window.scrollTo(0, 0);
-  }, []);
+
+    async function fetchType() {
+      try {
+        const responseType = await fetch(
+          `https://selenmebelapi20240307024627.azurewebsites.net/api/Furnitures/ByPagination?PageIndex=${furniture_id}`
+        );
+        const typeData = await responseType.json();
+        setFurnitureArray(typeData);
+        console.log(furnitureArray)
+      } catch (error) {
+        console.error("Error fetching type data:", error);
+      }
+    }
+
+    fetchType();
+  }, [furniture_id]);
   return (
     <div>
       <div className={styles.bolalar}>
@@ -35,21 +55,21 @@ export default function Ofis() {
           </div>
         </div>
         <Malumot />
-        <RasmlarPastki />
+        <RasmlarPastki url_image={furniture_url_by_index} array_furniture={furnitureArray} />
       </div>
     </div>
   );
 }
 
-function RasmlarPastki() {
-  const {t} = useTranslation();
-  const [tag3,setTag3]= useState('imagesOfis');
+function RasmlarPastki({url_image, array_furniture}) {
+  const { t } = useTranslation();
+  const [tag3, setTag3] = useState("imagesOfis");
   return (
     <div className={stylesb.rasmlar}>
-      {imagesOfis.map((r,index) => (
+      {array_furniture.map((r, index) => (
         <div className={stylesb.rasm_grp1}>
-          <img src={r.img} alt="rasm" />
-          <p>{r.ttl}</p>
+          <img src={`${url_image}DownloadByImageName?imageName=${r.image}`} alt="rasm" />
+          <p>{r.name}</p>
           <button>{t("pod")}</button>
           <Link to={`/items/${tag3}/${index}`}>
             <div className={stylesb.hover_effect}>

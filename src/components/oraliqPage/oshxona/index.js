@@ -1,44 +1,55 @@
-import React, { useEffect } from "react";
-import Navbar from "../../../layout/navbar";
-import Footer from "../../../layout/footer";
+import React, { useEffect, useState } from "react";
 import styles from "./index.module.scss";
-import { NavLink } from "react-router-dom";
-import b1 from "../../../assets/images/seren/oshxona/HI-TECH/image47.jpg";
-import b2 from "../../../assets/images/seren/oshxona/klassik/image8.jpg";
-import b3 from "../../../assets/images/seren/oshxona/royal/image12.jpg";
+import { NavLink, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
-export default function OshxonaOraliq() {
+export default function Oraliq() {
+  const { typeId } = useParams();
   const { t } = useTranslation();
+  const type_of_furniture_url =
+    "https://selenmebelapi20240307024627.azurewebsites.net/api/TypeOfFurnitures/";
+  const [typeArray, setTypeArray] = useState([]);
+  
   useEffect(() => {
-    // Scroll to the top of the page when the component mounts
     window.scrollTo(0, 0);
-  }, []);
+
+    async function fetchType() {
+      try {
+        const responseType = await fetch(
+          `https://selenmebelapi20240307024627.azurewebsites.net/api/TypeOfFurnitures/${typeId}`
+        );
+        const typeData = await responseType.json();
+        setTypeArray((prevTypeArray) => [typeData]);
+      } catch (error) {
+        console.error("Error fetching type data:", error);
+      }
+    }
+    
+      fetchType();
+  }, [typeId]);
+
 
   return (
     <div>
       <div className={styles.oraliqo}>
-        <div className={styles.oraliq_grp}>
-          <img src={b1} alt="hi_tech" />
-          <p className={styles.oraliq_ttl}>HI TECH</p>
-          <NavLink to="/oshxona">
-            <button>{t('pod')}</button>
-          </NavLink>
-        </div>
-        <div className={styles.oraliq_grp}>
-          <img src={b2} alt="klassik" />
-          <p className={styles.oraliq_ttl}>Klassik</p>
-          <NavLink to="/OshxonaKlassik">
-            <button>{t('pod')}</button>
-          </NavLink>
-        </div>
-        <div className={styles.oraliq_grp}>
-          <img src={b3} alt="royal" />
-          <p className={styles.oraliq_ttl}>Royal</p>
-          <NavLink to="/OshxonaRoyal">
-            <button>{t('pod')}</button>
-          </NavLink>
-        </div>
+        {typeArray.map((r, index) => (
+          <div className={styles.oraliq_grp} key={index}>
+            <img
+              src={`${type_of_furniture_url}DownloadByImageName?imageName=${r.image}`}
+              alt="hi_tech"
+            />
+            <p className={styles.oraliq_ttl}>
+              {r.typeOfSelen === 1
+                ? "HI -TECH"
+                : r.typeOfSelen === 2
+                ? "KLASSIK"
+                : "ROYAL"}
+            </p>
+            <NavLink to={`/ofis/${r.typeOfSelen}`}>
+              <button>{t("pod")}</button>
+            </NavLink>
+          </div>
+        ))}
       </div>
     </div>
   );

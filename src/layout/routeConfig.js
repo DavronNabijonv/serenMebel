@@ -1,5 +1,5 @@
 import AyvonZal from "../components/oraliqPage/ayvonZal";
-import OshxonaOraliq from "../components/oraliqPage/oshxona";
+import Oraliq from "../components/oraliqPage/oshxona";
 import AyvonKlassik from "../one_page/ayvonKlassik";
 import Bolalar from "../one_page/bolalar";
 import KirishMebel from "../one_page/kirishqismi";
@@ -35,7 +35,7 @@ export const routes = [
   },
   {
     id: 4,
-    path: "/ofis",
+    path: "/ofis/:furniture_id",
     element: <Ofis />,
   },
   {
@@ -60,8 +60,8 @@ export const routes = [
   },
   {
     id: 9,
-    path: "/oshxonaOraliq",
-    element: <OshxonaOraliq />,
+    path: "/oraliq/:typeId",
+    element: <Oraliq />,
   },
   {
     id: 10,

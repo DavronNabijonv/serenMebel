@@ -14,7 +14,7 @@ export default function Tarmoq() {
         <div className={styles.grp}>
             <a href='https://t.me/SEREN_MEBEL'><button><FaTelegramPlane/> Telegram</button></a>
             <a href='https://www.instagram.com/seren_mebel_uz?igsh=dmU4cGtlM3hjejE1'><button><RiInstagramFill/> Instagram</button></a>
-            <a><button><IoLogoYoutube/> YouTobe</button></a>
+            <a href='https://www.youtube.com/@seren_mebel_uz'><button><IoLogoYoutube/> YouTobe</button></a>
             <a href='https://www.facebook.com/profile.php?id=61555581179354&mibextid=JRoKGi' target='_blank'><button><RiFacebookFill/> Facebook</button></a>
         </div>
     </div>

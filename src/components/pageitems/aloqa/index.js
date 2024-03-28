@@ -68,7 +68,7 @@ export default function Aloqa() {
             </button>
           </form>
           <p className={styles.tel}>
-            <FaPhoneAlt /> +998 91 214 34 72
+            <FaPhoneAlt /> +998 91 214 34 72 +998 95 334 60 60
           </p>
           <p className={styles.tel}>
             <IoMdMail /> Sardorusmon111@gmail.com

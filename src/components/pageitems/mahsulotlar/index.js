@@ -1,107 +1,55 @@
 // Mahsulotlar.js
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./index.module.scss";
-import { mahsulot } from "../../db/mahsulotlar";
 import { NavLink } from "react-router-dom";
 import Scale from "../../FrameMotion/scale";
 import { useTranslation } from "react-i18next";
-import m2 from "../../../assets/images/m2.jpg";
-import m3 from "../../../assets/images/m3.jpg";
-import m5 from "../../../assets/images/m5.jpg";
-import m7 from "../../../assets/images/m7.jpg";
-import m8 from "../../../assets/images/m8.jpg";
-import m9 from "../../../assets/images/m9.jpg";
-import m10 from "../../../assets/images/m10.jpg";
-import m11 from "../../../assets/images/seren/polkalar va stellaj/image15.jpg";
-import m12 from "../../../assets/images/seren/ayvon va zal/hi tech/image15.jpg";
 
 export default function Mahsulotlar() {
   const { t } = useTranslation();
+  const categories_api_url = `https://selenmebelapi20240307024627.azurewebsites.net/api/Categories`;
+  const [myArray, setMyArray] = useState();
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const response = await fetch(
+          "https://selenmebelapi20240307024627.azurewebsites.net/api/Categories"
+        );
+        const data = await response.json();
+        console.log(data);
+        setMyArray(data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    }
+
+    fetchData();
+  }, []);
   return (
     <div className={styles.mahsulot}>
       <p className={styles.mttl}>{t("b_mahsulot")}</p>
       <div className={styles.mbody}>
-        <Scale>
-          <div className={styles.mgrp} key='1'>
-            <img src={m2} alt='oshxona mebel' />
-            <p>{t('m1')}</p>
-            <NavLink to={'/oshxonaOraliq'}>
-              <button>{t('pod')}</button>
-            </NavLink>
-          </div>
-        </Scale>
-        <Scale>
-          <div className={styles.mgrp} key='2'>
-            <img src={m3} alt='shkaf mebel' />
-            <p>{t('m2')}</p>
-            <NavLink to={'/km'}>
-              <button>{t('pod')}</button>
-            </NavLink>
-          </div>
-        </Scale>
-        <Scale>
-          <div className={styles.mgrp} key='3'>
-            <img src={m5} alt='ofis mebel' />
-            <p>{t('m3')}</p>
-            <NavLink to={'/ofis'}>
-              <button>{t('pod')}</button>
-            </NavLink>
-          </div>
-        </Scale>
-        <Scale>
-          <div className={styles.mgrp} key='4'>
-            <img src={m7} alt='yumshoq mebel' />
-            <p>{t('m4')}</p>
-            <NavLink to={'/yumshoq'}>
-              <button>{t('pod')}</button>
-            </NavLink>
-          </div>
-        </Scale>
-        <Scale>
-          <div className={styles.mgrp} key='5'>
-            <img src={m12} alt='ayvon va zal mebel' />
-            <p>{t('m5')}</p>
-            <NavLink to={'/AyvonOraliq'}>
-              <button>{t('pod')}</button>
-            </NavLink>
-          </div>
-        </Scale>
-        <Scale>
-          <div className={styles.mgrp} key='6'>
-            <img src={m9} alt='yumshoq mebel' />
-            <p>{t('m6')}</p>
-            <NavLink to={'/yotoqxona'}>
-              <button>{t('pod')}</button>
-            </NavLink>
-          </div>
-        </Scale>
-        <Scale>
-          <div className={styles.mgrp} key='7'>
-            <img src={m10} alt='bolalar mebel' />
-            <p>{t('m7')}</p>
-            <NavLink to={'/bolalar'}>
-              <button>{t('pod')}</button>
-            </NavLink>
-          </div>
-        </Scale>
-        <Scale>
-          <div className={styles.mgrp} key='8'>
-            <img src={m11} alt='polkalar va stellajlar' />
-            <p>{t('m8')}</p>
-            <NavLink to={'/polkalar'}>
-              <button>{t('pod')}</button>
-            </NavLink>
-          </div>
-        </Scale>
-        <Scale>
-          <div className={styles.mgrp} key='9'>
-            <img src={m8} alt='stol va stullar' />
-            <p>{t('m9')}</p>
-            <NavLink to={'/stolst'}>
-              <button>{t('pod')}</button>
-            </NavLink>
-          </div>
-        </Scale>
+        {myArray ? (
+          myArray.map((r, index) => (
+            <Scale>
+              <div className={styles.mgrp} key={index}>
+                <img
+                  src={`${categories_api_url}/DownloadByImageName?imageName=${r.image}`}
+                  alt="stol va stullar"
+                />
+                <p>{r.name}</p>
+                {r.typeOfFurnitures.length > 0 && (
+                  <NavLink to={`/oraliq/${r.id}`}>
+                    <button>{t("pod")}</button>
+                  </NavLink>
+                )}
+              </div>
+            </Scale>
+          ))
+        ) : (
+          <p>Images are loading ... </p>
+        )}
       </div>
     </div>
   );

@@ -20,6 +20,7 @@ export default function MainPage() {
   const [innerWidth, setInnerWidth] = useState(window.innerWidth);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     const handleResize = () => {
       setInnerWidth(window.innerWidth);
     };

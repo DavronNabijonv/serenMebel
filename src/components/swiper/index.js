@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./styles.scss";
 import { NavLink } from "react-router-dom";
-import { mahsulot } from "../db/mahsulotlar";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -27,6 +26,25 @@ import { Pagination, Navigation } from "swiper/modules";
 
 export default function MahsulotlarSwiper() {
   const { t } = useTranslation();
+  const categories_api_url = `https://selenmebelapi20240307024627.azurewebsites.net/api/Categories`;
+  const [myArray, setMyArray] = useState();
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const response = await fetch(
+          "https://selenmebelapi20240307024627.azurewebsites.net/api/Categories"
+        );
+        const data = await response.json();
+        console.log(data);
+        setMyArray(data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    }
+
+    fetchData();
+  }, []);
   return (
     <div className="swipergrp">
       <p className="ttl">{t("b_mahsulot")}</p>
@@ -40,87 +58,30 @@ export default function MahsulotlarSwiper() {
           modules={[Pagination, Navigation]}
           className="mySwiper"
         >
-          <SwiperSlide>
-            <div className="mgrp" key="1">
-              <img src={m2} alt="oshxona mebel" />
-              <p>{t("m1")}</p>
-              <NavLink to={"/oshxonaOraliq"}>
-                <button>{t("pod")}</button>
-              </NavLink>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="mgrp" key="2">
-              <img src={m3} alt="shkaf mebel" />
-              <p>{t("m2")}</p>
-              <NavLink to={"/km"}>
-                <button>{t("pod")}</button>
-              </NavLink>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="mgrp" key="3">
-              <img src={m5} alt="ofis mebel" />
-              <p>{t("m3")}</p>
-              <NavLink to={"/ofis"}>
-                <button>{t("pod")}</button>
-              </NavLink>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="mgrp" key="4">
-              <img src={m7} alt="yumshoq mebel" />
-              <p>{t("m4")}</p>
-              <NavLink to={"/yumshoq"}>
-                <button>{t("pod")}</button>
-              </NavLink>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="mgrp" key="5">
-              <img src={m12} alt="ayvon va zal mebel" />
-              <p>{t("m5")}</p>
-              <NavLink to={"/AyvonOraliq"}>
-                <button>{t("pod")}</button>
-              </NavLink>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="mgrp" key="6">
-              <img src={m9} alt="yumshoq mebel" />
-              <p>{t("m6")}</p>
-              <NavLink to={"/yotoqxona"}>
-                <button>{t("pod")}</button>
-              </NavLink>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="mgrp" key="7">
-              <img src={m10} alt="bolalar mebel" />
-              <p>{t("m7")}</p>
-              <NavLink to={"/bolalar"}>
-                <button>{t("pod")}</button>
-              </NavLink>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="mgrp" key="8">
-              <img src={m11} alt="polkalar va stellajlar" />
-              <p>{t("m8")}</p>
-              <NavLink to={"/polkalar"}>
-                <button>{t("pod")}</button>
-              </NavLink>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="mgrp" key="9">
-              <img src={m8} alt="stol va stullar" />
-              <p>{t("m9")}</p>
-              <NavLink to={"/stolst"}>
-                <button>{t("pod")}</button>
-              </NavLink>
-            </div>
-          </SwiperSlide>
+          {myArray ? (
+            myArray.map((r, index) => (
+              <SwiperSlide>
+                <div className="mgrp" key={index}>
+                  <img
+                    src={`${categories_api_url}/DownloadByImageName?imageName=${r.image}`}
+                    alt="oshxona mebel"
+                  />
+                  <p>{r.name}</p>
+                  {r.typeOfFurnitures.length > 0 ? (
+                    <NavLink to={`/oraliq/${r.id}`}>
+                      <button>{t("pod")}</button>
+                    </NavLink>
+                  ) : (
+                    <NavLink to={`/ofis/${r.id}`}>
+                      <button>{t("pod")}</button>
+                    </NavLink>
+                  )}
+                </div>
+              </SwiperSlide>
+            ))
+          ) : (
+            <p>Images are loading ... </p>
+          )}
         </Swiper>
       </div>
     </div>

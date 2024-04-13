@@ -2,18 +2,19 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./layout/navbar";
 import Footer from "./layout/footer";
 import { routes } from "./layout/routeConfig";
-import { useEffect } from "react";
+import LoadPart from "./components/loadPart";
 
 function App() {
-  // useEffect(()=>{window.reload()},[])
+ 
   return (
     <>
+      <LoadPart />
       <Navbar
-          mahsulot="mahsulot"
-          xizmat="xizmat"
-          haqida="haqida"
-          aloqa="aloqa"
-        />
+        mahsulot="mahsulot"
+        xizmat="xizmat"
+        haqida="haqida"
+        aloqa="aloqa"
+      />
       <Routes>
         {routes.map(({ id, ...rest }) => (
           <Route key={id} {...rest} />

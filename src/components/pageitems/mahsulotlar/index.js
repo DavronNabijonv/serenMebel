@@ -39,8 +39,12 @@ export default function Mahsulotlar() {
                   alt="stol va stullar"
                 />
                 <p>{r.name}</p>
-                {r.typeOfFurnitures.length > 0 && (
+                {r.typeOfFurnitures.length > 0 ? (
                   <NavLink to={`/oraliq/${r.id}`}>
+                    <button>{t("pod")}</button>
+                  </NavLink>
+                ) : (
+                  <NavLink to={`/ofis/${r.id}`}>
                     <button>{t("pod")}</button>
                   </NavLink>
                 )}

@@ -205,7 +205,7 @@
     margin: auto;
     text-align: center;
     padding: 2vw 0 0 0;
-    border-radius: 3vw;
+    border-radius: 40px;
     border: 0.18vw solid white;
     position: relative;
     img {
@@ -220,67 +220,96 @@
       color: white;
       font-weight: 700;
       font-family: "Inter";
-      font-size: 2.5vw;
-      margin: 2vw 8vw;
+      font-size: 35px;
+      margin: 20px;
     }
-    button {
-      font-size: 2vw;
-      font-family: "Inter", sans-serif;
+    .btn_rasm_grp1 {
+      width: 250px;
+      font-size: 30px;
+      font-weight: 600;
+      padding: 15px 0;
+      border-radius: 10px;
       background: linear-gradient(
         140deg,
         #5c5c5c 1.86%,
         #cdcbcb 44.24%,
         #5c5c5c 96.52%
       );
-      border: none;
-      border-radius: 1vw;
-      width: 20vw;
-      font-weight: bold;
       color: #111;
-      padding: 0.7vw 1vw;
-      margin-bottom: 1vw;
+      font-family: "Inter", sans-serif;
+      letter-spacing: 3px;
+      margin-bottom: 20px;
     }
-    .hover_effect {
-      display: none;
-      width: 100%;
-      height: 100%;
-      align-items: center;
-      justify-content: center;
-      position: absolute;
-      background: #0909098f;
-      backdrop-filter: blur(4px);
-      -webkit-backdrop-filter: blur(4px);
-      top: 0;
-      border-radius: 3vw;
-      button {
-        font-size: 2vw;
-        font-family: "Inter", sans-serif;
-        background: linear-gradient(
-          140deg,
-          #5c5c5c 1.86%,
-          #cdcbcb 44.24%,
-          #5c5c5c 96.52%
-        );
-        border: none;
-        border-radius: 1vw;
-        width: 10vw;
-        font-weight: bold;
-        color: #111;
-        padding: 1vw;
+    a {
+      .hover_effect {
+        display: none;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        padding-top: 40%;
+        border-radius: 40px;
+        background-color: rgba($color: #000000, $alpha: 0.5);
+        button {
+          width: 250px;
+          font-size: 30px;
+          font-weight: 600;
+          padding: 15px 0;
+          border-radius: 10px;
+          background: linear-gradient(
+            140deg,
+            #5c5c5c 1.86%,
+            #cdcbcb 44.24%,
+            #5c5c5c 96.52%
+          );
+          color: #111;
+          font-family: "Inter", sans-serif;
+          letter-spacing: 3px;
+        }
       }
     }
   }
   .rasm_grp1:hover {
-    .hover_effect {
-      display: flex;
+    a {
+      .hover_effect {
+        display: block;
+      }
     }
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1300px) {
+  .rasmlar {
+    gap: 2vw;
+    padding-bottom: 7vw;
+    .rasm_grp1 {
+      p {
+        font-size: 30px;
+      }
+      .btn_rasm_grp1 {
+        width: 220px;
+        padding: 10px 0;
+        font-size: 25px;
+        letter-spacing: 2px;
+      }
+      a {
+        .hover_effect {
+          button {
+            width: 220px;
+            padding: 10px 0;
+            font-size: 25px;
+            letter-spacing: 2px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
   .rasmlar {
     .rasm_grp1 {
-      width: 80%;
+      width: 60%;
       img {
         height: 40vw;
       }
@@ -288,16 +317,112 @@
   }
 }
 
+@media (max-width: 900px) {
+  .rasmlar {
+    gap: 70px;
+    padding-bottom: 7vw;
+    .rasm_grp1 {
+      p {
+        font-size: 25px;
+      }
+      .btn_rasm_grp1 {
+        width: 200px;
+        font-size: 25px;
+        letter-spacing: 2px;
+      }
+      a {
+        .hover_effect {
+          button {
+            width: 200px;
+            font-size: 25px;
+            letter-spacing: 2px;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .rasmlar {
-    gap: 8vw;
+    gap: 70px;
+    padding-bottom: 7vw;
     .rasm_grp1 {
-      padding: 5vw 0 2vw 0;
+      padding: 20px 5px;
+      border-radius: 25px;
       img {
-        height: 55vw;
+        width: 95%;
+        height: 45vw;
       }
       p {
-        font-size: 4vw;
+        font-size: 20px;
+      }
+      .btn_rasm_grp1 {
+        width: 200px;
+        margin-bottom: 0;
+        font-size: 20px;
+        letter-spacing: 2px;
+      }
+      a {
+        .hover_effect {
+          border-radius: 25px;
+          button {
+            width: 200px;
+            font-size: 25px;
+            letter-spacing: 2px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .rasmlar {
+    .rasm_grp1 {
+      width: 78%;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .rasmlar {
+    .rasm_grp1 {
+      width: 90%;
+      padding: 18px 5px 0 5px;
+      img {
+        min-height: 230px;
+      }
+      p {
+        font-size: 20px;
+        margin: 15px 20px;
+      }
+      .btn_rasm_grp1 {
+        width: 180px;
+        font-size: 24px;
+        padding: 8px 0;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+      }
+      a {
+        .hover_effect {
+          button {
+            width: 180px;
+            font-size: 24px;
+            padding: 8px 0;
+            letter-spacing: 2px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 300px) {
+  .rasmlar {
+    .rasm_grp1 {
+      img {
+        height: auto;
       }
     }
   }

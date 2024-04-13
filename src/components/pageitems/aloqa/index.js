@@ -10,7 +10,7 @@ export default function Aloqa() {
   const [mes, setMes] = useState();
   const handleSubmit = (e) => {
     e.preventDefault(); //entir bosilganda sayit ereflish bulib ketmasilgi uchun
-    
+
     const botToken = "5191102725:AAEzAHpvQUiJ_PM5p9Gw8IsnVfH9RclpGAM"; // bot tokini
     const chatId = 349142723; // botning adminini idisi
     // malumot yuborilish tartibi
@@ -38,7 +38,6 @@ export default function Aloqa() {
       .then((data) => {
         console.log("Xabar yuborildi:", data);
         reset(); // Xabar yuborildi, reset ishlasin
-      
       })
       .catch((error) => {
         console.error("Xabar yuborishda xatolik:", error);
@@ -50,7 +49,7 @@ export default function Aloqa() {
     setMes("");
     setTel("");
   };
-  const {t} = useTranslation();
+  const { t } = useTranslation();
   return (
     <div className={styles.aloqa}>
       <div className={styles.container}>
@@ -58,24 +57,37 @@ export default function Aloqa() {
           <p className={styles.ttl}>{t("aloqa")}</p>
           <form>
             <p className={styles.fttl}>
-            {t("tel")} <span>*</span>
+              {t("tel")} <span>*</span>
             </p>
-            <input type="text" value={tel} onChange={(e) => setTel(e.target.value)} placeholder={t("tel")} />
+            <input
+              type="text"
+              value={tel}
+              onChange={(e) => setTel(e.target.value)}
+              placeholder={t("tel")}
+            />
             <p className={styles.fttl}>{t("sms")}</p>
-            <textarea placeholder={t("sms")} value={mes} onChange={(e) => setMes(e.target.value)} />
+            <textarea
+              placeholder={t("sms")}
+              value={mes}
+              onChange={(e) => setMes(e.target.value)}
+            />
             <button className={styles.btn} onClick={handleSubmit}>
-            {t("btn")}<FaArrowRightLong />
+              {t("btn")}
+              <FaArrowRightLong />
             </button>
           </form>
-          <p className={styles.tel}>
-            <FaPhoneAlt /> +998 91 214 34 72 +998 95 334 60 60
-          </p>
+          <div>
+            
+            <p className={styles.tel}><FaPhoneAlt /> +998 91 214 34 72</p>
+            <p className={styles.tel}><FaPhoneAlt /> +998 95 334 60 60</p>
+          </div>
           <p className={styles.tel}>
             <IoMdMail /> Sardorusmon111@gmail.com
           </p>
           <p className={styles.tel}>
-            <FaLocationDot />Toshkent shahar Yashnabod tumani Olmos
-            mahallasi Yakkatol 3-tor ko`chasi 38 uy
+            <FaLocationDot />
+            Toshkent shahar Yashnabod tumani Olmos mahallasi Yakkatol 3-tor
+            ko`chasi 38 uy
           </p>
         </div>
         <div className={styles.f2}>

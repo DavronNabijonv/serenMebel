@@ -1,29 +1,46 @@
 import React, { useEffect, useState } from "react";
-import Navbar from "../../layout/navbar";
-import Footer from "../../layout/footer";
 import styles from "./index.module.scss";
-import b1 from "../../assets/images/m6.jpg";
-import b2 from "../../assets/images/m10.jpg";
-import b3 from "../../assets/images/seren/bolalar/image11.jpg";
-import b4 from "../../assets/images/seren/bolalar/image1.jpg";
-import { imagesBolalar } from "../../components/db/mahsulotlar";
+import b1 from "../../assets/images/seren/ofis/image21.webp";
+import b2 from "../../assets/images/seren/ofis/image13.jpg";
+import b3 from "../../assets/images/seren/ofis/image15.jpg";
+import b4 from "../../assets/images/seren/ofis/image12.jpg";
 import { useTranslation } from "react-i18next";
 import { SiAntdesign } from "react-icons/si";
 import { GrTechnology } from "react-icons/gr";
 import { DiMaterializecss } from "react-icons/di";
 import { FaFileContract } from "react-icons/fa6";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
-export default function Bolalar() {
+export default function Ofis() {
   const { t } = useTranslation();
+  const { furniture_id } = useParams();
+  const furniture_url_by_index =
+    "https://selenmebelapi20240307024627.azurewebsites.net/api/Furnitures/";
+  const [furnitureArray, setFurnitureArray] = useState([]);
+
   useEffect(() => {
     // Scroll to the top of the page when the component mounts
     window.scrollTo(0, 0);
-  }, []);
+
+    async function fetchType() {
+      try {
+        const responseType = await fetch(
+          `https://selenmebelapi20240307024627.azurewebsites.net/api/Furnitures/ByPagination?PageIndex=${furniture_id}`
+        );
+        const typeData = await responseType.json();
+        setFurnitureArray(typeData);  
+        console.log(typeData);
+      } catch (error) {
+        console.error("Error fetching type data:", error);
+      }
+    }
+
+    fetchType();
+  }, [furniture_id]);
   return (
     <div>
       <div className={styles.bolalar}>
-        <p className={styles.ttl}>{t("m7")}</p>
+        <p className={styles.ttl}>{t("m3")}</p>
         <div className={styles.cnt}>
           <div className={styles.imgs}>
             <img src={b1} />
@@ -36,23 +53,38 @@ export default function Bolalar() {
           </div>
         </div>
         <Malumot />
-        <RasmlarPastki />
+        <RasmlarPastki
+          url_image={furniture_url_by_index}
+          array_furniture={furnitureArray}
+        />
       </div>
     </div>
   );
 }
 
-function RasmlarPastki() {
+function RasmlarPastki({ url_image, array_furniture }) {
   const { t } = useTranslation();
-  const [tag, setTag] = useState("imagesBolalar");
+  const [myArray, setMyArray] = useState();
+  useEffect(() => {
+    const new_Array = () => {
+      array_furniture.map((r) => {
+        setMyArray(r.furnitureFeatures);  
+          console.log(r.image)
+      });
+    };
+    new_Array();
+  }, []);
   return (
     <div className={styles.rasmlar}>
-      {imagesBolalar.map((r, index) => (
+      {array_furniture.map((r, index) => (
         <div className={styles.rasm_grp1} key={index}>
-          <img src={r.img} alt="rasm" />
-          <p>{r.ttl}</p>
-          <button>{t("pod")}</button>
-          <Link to={`/items/${tag}/${index}`}>
+          <img
+            src={`${url_image}DownloadByImageName?imageName=${r.image}`}
+            alt="rasm"
+          />
+          <p>{r.name}</p>
+          <button className={styles.btn_rasm_grp1}>{t("pod")}</button>
+          <Link to={`/items/${JSON.stringify(r.furnitureFeatures)}/${r.image}/${r.price}/${r.name}`}>
             <div className={styles.hover_effect}>
               <button>{t("pod")}</button>
             </div>

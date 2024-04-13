@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./index.module.scss";
-import { xizmat } from "../../db/xizmatlar/index";
 import Popup from "../../FrameMotion/popup";
 import { useTranslation } from "react-i18next";
 import { SiAntdesign } from "react-icons/si";

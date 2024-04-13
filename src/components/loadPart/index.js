@@ -8,7 +8,7 @@ export default function LoadPart() {
     // Simulate loading for 3 seconds
     const loadingTimeout = setTimeout(() => {
       setIsLoading(false);
-    }, 1500);
+    }, 3000);
 
     // Cleanup the timeout when the component unmounts
     return () => {
@@ -19,10 +19,12 @@ export default function LoadPart() {
   return (
     <>
       {isLoading && (
-        <div className={styles.container}>
-          <p className="animate__animated animate__jackInTheBox animate__infinite animate__alternate">
-            SerenMebel
-          </p>
+        <div className={styles.div_container}>
+          <div className={styles.container}>
+            <p className="animate__animated animate__jackInTheBox animate__infinite animate__alternate">
+              SerenMebel
+            </p>
+          </div>
         </div>
       )}
     </>

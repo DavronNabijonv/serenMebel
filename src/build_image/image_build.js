@@ -20,84 +20,6 @@ import b5 from "./create_image/7.jpg";
 import oq from "../assets/images/white.jpg";
 import Info_load from "../components/loadPart/info_load";
 
-export default function Image_build() {
-  const [n_img, setN_img] = useState(b1);
-  const [build, setBuild] = useState(i1);
-  const [ga, setGa] = useState(false);
-  const [backgroundColor, setBackgroundColor] = useState("#282828"); // Initial background color
-
-  const handleColorChange = (event) => {
-    setBackgroundColor(event.target.value); // Update background color when user selects a new color
-  };
-
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    // Simulate loading for 3 seconds
-    const loadingTimeout = setTimeout(() => {
-      setIsLoading(false);
-    }, 3000);
-
-    // Cleanup the timeout when the component unmounts
-    return () => {
-      clearTimeout(loadingTimeout);
-    };
-  }, []);
-
-  return (
-    <>
-      {isLoading ? (
-        <Info_load />
-      ) : (
-        <div className={styles.img_build}>
-          <div className={styles.b_color_change}>
-            <input
-              type="color"
-              value={backgroundColor}
-              onChange={handleColorChange}
-              className={styles.change_input}
-              onClick={() => {
-                setN_img(oq);
-                setGa(true);
-              }}
-            />
-            <div
-              className={styles.for_build}
-              style={ga ? { backgroundColor: `${backgroundColor}` } : {}}
-            >
-              <img src={n_img} className={ga && styles.change_image} />
-              <img src={build} className={styles.main_image} />
-            </div>
-          </div>
-          <Image_Slider
-            setB1={() => {
-              setN_img(b1);
-              setGa(false);
-            }}
-            setB2={() => {
-              setN_img(b2);
-              setGa(false);
-            }}
-            setB3={() => {
-              setN_img(b3);
-              setGa(false);
-            }}
-            setB4={() => {
-              setN_img(b4);
-              setGa(false);
-            }}
-            setB5={() => {
-              setN_img(b5);
-              setGa(false);
-            }}
-          />
-        </div>
-      )}
-    </>
-  );
-}
-
 function Image_Slider({ setB1, setB2, setB3, setB4, setB5 }) {
   return (
     <div>
@@ -128,5 +50,90 @@ function Image_Slider({ setB1, setB2, setB3, setB4, setB5 }) {
         </SwiperSlide>
       </Swiper>
     </div>
+  );
+}
+
+function Build_img(){
+  const [n_img, setN_img] = useState(b1);
+  const [build, setBuild] = useState(i1);
+  const [ga, setGa] = useState(false);
+  const [backgroundColor, setBackgroundColor] = useState("#282828"); // Initial background color
+
+  const handleColorChange = (event) => {
+    setBackgroundColor(event.target.value); // Update background color when user selects a new color
+  };
+  return (
+    <div className={styles.img_build}>
+    <div className={styles.b_color_change}>
+      <input
+        type="color"
+        value={backgroundColor}
+        onChange={handleColorChange}
+        className={styles.change_input}
+        onClick={() => {
+          setN_img(oq);
+          setGa(true);
+        }}
+      />
+      <div
+        className={styles.for_build}
+        style={ga ? { backgroundColor: `${backgroundColor}` } : {}}
+      >
+        <img src={n_img} className={ga && styles.change_image} />
+        <img src={build} className={styles.main_image} />
+      </div>
+    </div>
+    <Image_Slider
+      setB1={() => {
+        setN_img(b1);
+        setGa(false);
+      }}
+      setB2={() => {
+        setN_img(b2);
+        setGa(false);
+      }}
+      setB3={() => {
+        setN_img(b3);
+        setGa(false);
+      }}
+      setB4={() => {
+        setN_img(b4);
+        setGa(false);
+      }}
+      setB5={() => {
+        setN_img(b5);
+        setGa(false);
+      }}
+    />
+  </div>
+  )
+}
+
+
+export default function Image_build() {
+
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    // Simulate loading for 3 seconds
+    const loadingTimeout = setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
+
+    // Cleanup the timeout when the component unmounts
+    return () => {
+      clearTimeout(loadingTimeout);
+    };
+  }, []);
+
+  return (
+    <>
+      {isLoading ? (
+        <Info_load />
+      ) : (
+       <Build_img/>
+      )}
+    </>
   );
 }

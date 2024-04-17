@@ -1,0 +1,27 @@
+@keyframes scale_for_info {
+    from{
+        scale:0.8;
+    }
+    to{
+        scale: 1;
+    }
+}
+
+.info_load{
+    width: 250px;
+    height: 850px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    p{
+        font-size: 45px;
+        font-weight: 700;
+        color: #f5d20a;
+        animation: scale_for_info infinite alternate-reverse 1s;
+    }
+}
+
+.head_load{
+    background-color: #252525;
+}

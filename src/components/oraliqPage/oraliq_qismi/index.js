@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import styles from "./index.module.scss";
 import { NavLink, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import Info_load from "../../loadPart/info_load";
 
 export default function Oraliq() {
   const { typeId } = useParams();
@@ -28,10 +29,23 @@ export default function Oraliq() {
       fetchType();
   }, [typeId]);
 
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading for 3 seconds
+    const loadingTimeout = setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
+
+    // Cleanup the timeout when the component unmounts
+    return () => {
+      clearTimeout(loadingTimeout);
+    };
+  }, []);
 
   return (
     <div>
-      <div className={styles.oraliqo}>
+      {isLoading? <Info_load/> :<div className={styles.oraliqo}>
         {typeArray.map((r, index) => (
           <div className={styles.oraliq_grp} key={index}>
             <img
@@ -50,7 +64,7 @@ export default function Oraliq() {
             </NavLink>
           </div>
         ))}
-      </div>
+      </div>}
     </div>
   );
 }

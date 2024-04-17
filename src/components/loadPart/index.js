@@ -5,6 +5,7 @@ export default function LoadPart() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    
     // Simulate loading for 3 seconds
     const loadingTimeout = setTimeout(() => {
       setIsLoading(false);

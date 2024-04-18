@@ -129,11 +129,8 @@ export default function Image_build() {
 
   return (
     <>
-      {isLoading ? (
-        <Info_load />
-      ) : (
-       <Build_img/>
-      )}
+      {isLoading&& <Info_load />}
+      <Build_img/>
     </>
   );
 }

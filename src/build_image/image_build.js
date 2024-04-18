@@ -57,7 +57,7 @@ function Build_img(){
   const [n_img, setN_img] = useState(b1);
   const [build, setBuild] = useState(i1);
   const [ga, setGa] = useState(false);
-  const [backgroundColor, setBackgroundColor] = useState("#282828"); // Initial background color
+  const [backgroundColor, setBackgroundColor] = useState(); // Initial background color
 
   const handleColorChange = (event) => {
     setBackgroundColor(event.target.value); // Update background color when user selects a new color

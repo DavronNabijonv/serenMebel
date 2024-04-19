@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./layout/navbar";
 import Footer from "./layout/footer";
 import { routes } from "./layout/routeConfig.js";
-import LoadPart from "./components/loadPart";
+import LoadPart from "components/loadPart";
 import { QueryClient, QueryClientProvider } from "react-query";
 
 const queryClient = new QueryClient();

@@ -1,19 +1,15 @@
 import React, { useEffect, useState } from "react";
-import Navbar from "../layout/navbar";
 import AsosiySwiper from "../components/asosiyswiper";
 import Mahsulotlar from "../components/pageitems/mahsulotlar";
 import Xizmatlar from "../components/pageitems/xizmatlar";
 import Haqida from "../components/pageitems/haqida";
 import Tarmoq from "../components/pageitems/tarmoqlar";
 import Rasmlar from "../components/pageitems/rasmlar";
-import Footer from "../layout/footer";
 import LoadPart from "../components/loadPart";
 import Aloqa from "../components/pageitems/aloqa";
 import MahsulotlarSwiper from "../components/swiper";
 import XizmatSwiper from "../components/xizmatswiper";
-import { Element, animateScroll as scroll, scrollSpy } from "react-scroll";
-import { Route, Routes } from "react-router-dom";
-import { routes } from "../layout/routeConfig";
+import { Element } from "react-scroll";
 import To_Build from "../components/to_build";
 
 export default function MainPage() {

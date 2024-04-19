@@ -1,5 +1,21 @@
 @import url(../../style/index.scss);
 
+.for_none{
+  .swiper-button-prev {
+    display: none;
+  }
+  .swiper-button-next {
+    display: none;
+  }
+  .swiper-pagination{
+    display: none;
+    .swiper-pagination-bullet{
+        color: #cdcbcb;
+        background: #cdcbcb;
+        stroke: #5c5c5c;
+    }
+  }
+}
 .swipergrp {
   background: #282828;
   .ttl {

@@ -1,0 +1,104 @@
+@import url(../style/index.scss);
+
+.no_result_oraliq{
+  width: 100%;
+  height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.oraliqo {
+  background-color: #282828;
+  display: flex;
+  gap: 2vw;
+  padding: 10vw 0;
+  .oraliq_grp {
+    width: 30%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5vw;
+    border: 2px solid white;
+    padding: 2.5vw 0;
+    img {
+      width: 90%;
+      height: 20vw;
+    }
+    p {
+      color: white;
+      width: 100%;
+      text-align: start;
+      padding-left: 5vw;
+      margin: 1vw 0;
+      font-weight: bold;
+      font-size: 2vw;
+    }
+    button {
+      font-size: 2vw;
+      font-family: "Inter", sans-serif;
+      background: linear-gradient(
+        140deg,
+        #5c5c5c 1.86%,
+        #cdcbcb 44.24%,
+        #5c5c5c 96.52%
+      );
+      border: none;
+      border-radius: 1vw;
+      width: 20vw;
+      font-weight: bold;
+      color: #111;
+      padding: 1vw;
+    }
+  }
+}
+
+@media(max-width:1000px){
+  .oraliqo{
+    padding-top: 15vw;
+  }
+}
+
+@media(max-width:768px){
+  .oraliqo{
+    padding-top: 15vw;
+    flex-direction: column;
+    gap: 8vw;
+    .oraliq_grp{
+      width: 90%;
+      padding: 5vw 0;
+      img{
+        height: 65%;
+      }
+      p{
+        margin: 5vw 0;
+        font-size: 4vw;
+      }
+      button{
+        width: 60vw;
+        font-size: 4vw;
+      }
+    }
+  }
+}
+
+@media(max-width:500px){
+  .oraliqo{
+    padding-top: 20vw;
+  }
+}
+
+@media(max-width:370px){
+  .oraliqo{
+    padding-top: 28vw;
+  }
+}
+
+@media(max-width:240px){
+  .oraliqo{
+    padding-top: 38vw;
+  }
+}

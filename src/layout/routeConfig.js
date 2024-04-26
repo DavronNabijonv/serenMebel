@@ -1,9 +1,9 @@
-import Oraliq from "../components/oraliqPage/oraliq_qismi";
-import Ofis from "../one_page/mebel_rasmlari";
-import MainPage from "../one_page";
+import MainPage from "../pages_files/main_page";
 import Image_build from "../build_image/image_build";
-import Info_image from "../one_page/info_image/info_image";
-import Account from "../account/account";
+import Oraliq from "../pages_files/oraliq_page";
+import Info_image from "../pages_files/info_image";
+import Ofis from "../pages_files/all_furniture";
+import Account from "../pages_files/account/account";
 
 export const routes = [
   {
@@ -14,12 +14,12 @@ export const routes = [
   {
     id: 2,
     path: "/ofis/:furniture_id",
-    element: <Ofis />,
+    element: <Ofis/>,
   },
   {
     id: 3,
     path: "/oraliq/:typeId",
-    element: <Oraliq />,
+    element:  <Oraliq/>,
   },
   {
     id: 4,
@@ -29,7 +29,7 @@ export const routes = [
   {
     id: 5,
     path: "/items/:featuresData/:img_url/:price/:furniture_name",
-    element: <Info_image />,
+    element: <Info_image/>,
   },
   {
     id: 6,

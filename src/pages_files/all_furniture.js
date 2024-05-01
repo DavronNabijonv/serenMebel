@@ -10,70 +10,64 @@ import { GrTechnology } from "react-icons/gr";
 import { DiMaterializecss } from "react-icons/di";
 import { FaFileContract } from "react-icons/fa6";
 import { Link, useParams } from "react-router-dom";
+import { useQuery } from "react-query";
+import Info_load from "../components/loadPart/info_load";
+import No_result from "../components/mainPageItems/mahsulotlar/no_result";
 
-export default function   Ofis() {
+export default function Ofis() {
   const { t } = useTranslation();
-  const { furniture_id } = useParams();
+  const { furniture_id, typeName } = useParams();
   const furniture_url_by_index =
-    "https://selenmebelapi20240307024627.azurewebsites.net/api/Furnitures/";
-  const [furnitureArray, setFurnitureArray] = useState([]);
+    "https://selenmebelapi20240307024627.azurewebsites.net/";
+
+  const { isLoading, data } = useQuery("ofis", async () => {
+    const response = await fetch(
+      `https://selenmebelapi20240307024627.azurewebsites.net/api/Furnitures/ByPagination?PageIndex=${furniture_id}`
+    );
+    if (!response.ok) {
+      throw new Error("Failed to fetch todos");
+    }
+    return response.json(); // Parse response body as JSON
+  });
 
   useEffect(() => {
-    // Scroll to the top of the page when the component mounts
     window.scrollTo(0, 0);
 
-    async function fetchType() {
-      try {
-        const responseType = await fetch(
-          `https://selenmebelapi20240307024627.azurewebsites.net/api/Furnitures/ByPagination?PageIndex=${furniture_id}`
-        );
-        const typeData = await responseType.json();
-        setFurnitureArray(typeData);  
-        console.log(typeData);
-      } catch (error) {
-        console.error("Error fetching type data:", error);
-      }
-    }
-
-    fetchType();
+    console.log(data);
   }, [furniture_id]);
   return (
     <div>
-      <div className={styles.bolalar}>
-        <p className={styles.ttl}>{t("m3")}</p>
-        <div className={styles.cnt}>
-          <div className={styles.imgs}>
-            <img src={b1} />
-            <img src={b2} />
-            <img src={b3} />
-            <img src={b4} />
+      {isLoading ? (
+        <Info_load />
+      ) : data ? (
+        <div className={styles.bolalar}>
+          <p className={styles.ttl}>{typeName}</p>
+          <div className={styles.cnt}>
+            <div className={styles.imgs}>
+              <img src={b1} />
+              <img src={b2} />
+              <img src={b3} />
+              <img src={b4} />
+            </div>
+            <div className={styles.bolatxt}>
+              <p className={styles.txt}>{t("p4")}</p>
+            </div>
           </div>
-          <div className={styles.bolatxt}>
-            <p className={styles.txt}>{t("p4")}</p>
-          </div>
+          <Malumot />
+          <RasmlarPastki
+            url_image={furniture_url_by_index}
+            array_furniture={data}
+          />
         </div>
-        <Malumot />
-        <RasmlarPastki
-          url_image={furniture_url_by_index}
-          array_furniture={furnitureArray}
-        />
-      </div>
+      ) : (
+        <No_result />
+      )}
     </div>
   );
 }
 
 function RasmlarPastki({ url_image, array_furniture }) {
   const { t } = useTranslation();
-  const [myArray, setMyArray] = useState();
-  useEffect(() => {
-    const new_Array = () => {
-      array_furniture.map((r) => {
-        setMyArray(r.furnitureFeatures);  
-          console.log(r.image)
-      });
-    };
-    new_Array();
-  }, []);
   return (
     <div className={styles.rasmlar}>
       {array_furniture.map((r, index) => (
@@ -84,7 +78,11 @@ function RasmlarPastki({ url_image, array_furniture }) {
           />
           <p>{r.name}</p>
           <button className={styles.btn_rasm_grp1}>{t("pod")}</button>
-          <Link to={`/items/${JSON.stringify(r.furnitureFeatures)}/${r.image}/${r.price}/${r.name}`}>
+          <Link
+            to={`/items/${JSON.stringify(r.furnitureFeatures)}/${r.image}/${
+              r.price
+            }/${r.name}`}
+          >
             <div className={styles.hover_effect}>
               <button>{t("pod")}</button>
             </div>

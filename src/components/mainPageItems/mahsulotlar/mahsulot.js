@@ -10,7 +10,7 @@ import No_result from "./no_result";
 
 export default function Mahsulotlar() {
   const { t } = useTranslation();
-  const { isLoading, data } = useQuery("todos", async () => {
+  const { isLoading, data } = useQuery("mahsulot", async () => {
     const response = await fetch(
       "https://selenmebelapi20240307024627.azurewebsites.net/api/Categories"
     );
@@ -33,11 +33,11 @@ export default function Mahsulotlar() {
               />
               <p>{r.name}</p>
               {r.typeOfFurnitures.length > 0 ? (
-                <NavLink to={`/oraliq/${r.id}`}>
+                <NavLink to={`/oraliq/${r.id}/${r.name}`}>
                   <button>{t("pod")}</button>
                 </NavLink>
               ) : (
-                <NavLink to={`/ofis/${r.id}`}>
+                <NavLink to={`/ofis/${r.id}/${r.name}`}>
                   <button>{t("pod")}</button>
                 </NavLink>
               )}

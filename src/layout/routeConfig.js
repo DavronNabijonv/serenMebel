@@ -13,12 +13,12 @@ export const routes = [
   },
   {
     id: 2,
-    path: "/ofis/:furniture_id",
+    path: "/ofis/:furniture_id/:typeName",
     element: <Ofis/>,
   },
   {
     id: 3,
-    path: "/oraliq/:typeId",
+    path: "/oraliq/:typeId/:typeName",
     element:  <Oraliq/>,
   },
   {

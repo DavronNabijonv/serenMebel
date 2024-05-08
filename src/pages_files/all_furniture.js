@@ -17,10 +17,8 @@ import No_result from "../components/mainPageItems/mahsulotlar/no_result";
 export default function Ofis() {
   const { t } = useTranslation();
   const { furniture_id, typeName } = useParams();
-  const furniture_url_by_index =
-    "https://selenmebelapi20240307024627.azurewebsites.net/";
 
-  const { isLoading, data } = useQuery("ofis", async () => {
+  const { isLoading, data , error } = useQuery("ofis", async () => {
     const response = await fetch(
       `https://selenmebelapi20240307024627.azurewebsites.net/api/Furnitures/ByPagination?PageIndex=${furniture_id}`
     );
@@ -55,18 +53,18 @@ export default function Ofis() {
           </div>
           <Malumot />
           <RasmlarPastki
-            url_image={furniture_url_by_index}
             array_furniture={data}
           />
         </div>
       ) : (
         <No_result />
       )}
+      {error&&<No_result/>}
     </div>
   );
 }
 
-function RasmlarPastki({ url_image, array_furniture }) {
+function RasmlarPastki({  array_furniture }) {
   const { t } = useTranslation();
   return (
     <div className={styles.rasmlar}>
@@ -79,7 +77,7 @@ function RasmlarPastki({ url_image, array_furniture }) {
           <p>{r.name}</p>
           <button className={styles.btn_rasm_grp1}>{t("pod")}</button>
           <Link
-            to={`/items/${JSON.stringify(r.furnitureFeatures)}/${r.image}/${
+            to={`/items/${r.id}/${r.description}/${r.image}/${
               r.price
             }/${r.name}`}
           >

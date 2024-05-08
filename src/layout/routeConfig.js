@@ -28,9 +28,9 @@ export const routes = [
   },
   {
     id: 5,
-    path: "/items/:featuresData/:img_url/:price/:furniture_name",
+    path: "/items/:id/:tarif/:img_url/:price/:furniture_name",
     element: <Info_image/>,
-  },
+  },  
   {
     id: 6,
     path: "/account",

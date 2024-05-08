@@ -19,7 +19,6 @@ import { useQuery } from "react-query";
 
 export default function MahsulotlarSwiper() {
   const { t } = useTranslation();
-  const categories_api_url = `https://selenmebelapi20240307024627.azurewebsites.net/api/Categories`;
   const [myArray, setMyArray] = useState(false);
 
   const { isLoading, error, data } = useQuery("solos", async () => {
@@ -31,23 +30,9 @@ export default function MahsulotlarSwiper() {
     }
     return response.json(); // Parse response body as JSON
   });
-
-  // useEffect(() => {
-  //   async function fetchData() {
-  //     try {
-  //       const response = await fetch(
-  //         "https://selenmebelapi20240307024627.azurewebsites.net/api/Categories"
-  //       );
-  //       const data = await response.json();
-  //       console.log(data);
-  //       setMyArray(data);
-  //     } catch (error) {
-  //       console.error("Error fetching data:", error);
-  //     }
-  //   }
-
-  //   fetchData();
-  // }, []);
+  useEffect(()=>{
+    setMyArray(Array.isArray(data) ? data : [data]); 
+  },[data])
   return (
     <div className="swipergrp">
       <p className="ttl">{t("b_mahsulot")}</p>
@@ -61,52 +46,29 @@ export default function MahsulotlarSwiper() {
           modules={isLoading?[]:!data?[]:[]}
           className={isLoading?'for_none':!data?'for_none':`mySwiper`}
         >
-          {/* {myArray ? (
-            myArray.map((r, index) => (
-              <SwiperSlide>
-                <div className="mgrp" key={index}>
-                  <img
-                    src={`${categories_api_url}/DownloadByImageName?imageName=${r.image}`}
-                    alt="oshxona mebel"
-                  />
-                  <p>{r.name}</p>
-                  {r.typeOfFurnitures.length > 0 ? (
-                    <NavLink to={`/oraliq/${r.id}`}>
-                      <button>{t("pod")}</button>
-                    </NavLink>
-                  ) : (
-                    <NavLink to={`/ofis/${r.id}`}>
-                      <button>{t("pod")}</button>
-                    </NavLink>
-                  )}
-                </div>
-              </SwiperSlide>
-            ))
-          ) : (
-            <p>Images are loading ... </p>
-          )}, */}
           {isLoading? <Info_load/>:data?data.map((r, index) => (
           <SwiperSlide>
           <div className="mgrp" key={index}>
             <img
-              src={`${categories_api_url}/DownloadByImageName?imageName=${r.image}`}
+              src={`https://adminserenmebeluz.azurewebsites.net/${r.image}`}
               alt="oshxona mebel"
             />
             <p>{r.name}</p>
             {r.typeOfFurnitures.length > 0 ? (
-              <NavLink to={`/oraliq/${r.id}`}>
-                <button>{t("pod")}</button>
-              </NavLink>
-            ) : (
-              <NavLink to={`/ofis/${r.id}`}>
-                <button>{t("pod")}</button>
-              </NavLink>
-            )}
+                <NavLink to={`/oraliq/${r.id}/${r.name}`}>
+                  <button>{t("pod")}</button>
+                </NavLink>
+              ) : (
+                <NavLink to={`/ofis/${r.id}/${r.name}`}>
+                  <button>{t("pod")}</button>
+                </NavLink>
+              )}
           </div>
         </SwiperSlide>
         )):<No_result/>}
         </Swiper>
       </div>
+      {error && <No_result/>}
     </div>
   );
 }

@@ -11,28 +11,31 @@ export default function Oraliq() {
   const { t } = useTranslation();
   const [typeArray, setTypeArray] = useState([]);
 
-  const { isLoading, data, error } = useQuery("oraliq", async () => {
+  const { isLoading, data, error } = useQuery(["oraliq", typeId], async () => {
     const response = await fetch(
-      `https://selenmebelapi20240307024627.azurewebsites.net/api/TypeOfFurnitures/${typeId}`
+      `https://adminserenmebeluz.azurewebsites.net/api/Categories/${typeId}`
     );
     if (!response.ok) {
-      throw new Error("Failed to fetch todos");
+      throw new Error("Failed to fetch data");
     }
-    return response.json(); // Parse response body as JSON
+    return response.json();
   });
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    if (data) {
-      setTypeArray(Array.isArray(data) ? data : [data]);
+    if (data && Array.isArray(data.typeOfFurnitures)) {
+      setTypeArray(data.typeOfFurnitures);
+    } else {
+      setTypeArray([]);
+      console.error("Invalid data format or missing typeOfFurnitures array");
     }
-  }, [typeId, data]);
+  }, [data, typeId]);
 
   return (
     <div>
       {isLoading ? (
         <Info_load />
-      ) : error ? ( // Check if error occurred
+      ) : error ? (
         <div className={styles.no_result_oraliq}>
           <No_result />
         </div>

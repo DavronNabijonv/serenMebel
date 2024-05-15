@@ -19,6 +19,8 @@ export default function Mahsulotlar() {
     }
     return response.json(); // Parse response body as JSON
   });
+
+  console.log(data);
   
   return (
     <div className={styles.mahsulot}>

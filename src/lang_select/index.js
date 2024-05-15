@@ -9,10 +9,6 @@ const locales = [
 export default function ChangeLanguage() {
   const [tl, setTl] = useState("uz");
 
-  const handleLanguageChange = (locale) => {
-    i18n.changeLanguage(locale); // Use the key of the locale, not the title
-    // setTl(code);
-  };
 
   return (
     <div className={styles.lang}>

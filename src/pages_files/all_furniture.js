@@ -17,22 +17,32 @@ import No_result from "../components/mainPageItems/mahsulotlar/no_result";
 export default function Ofis() {
   const { t } = useTranslation();
   const { furniture_id, typeName } = useParams();
+  const [typeArrayAll , setTypeArrayAll] = useState([]);
 
   const { isLoading, data , error } = useQuery("ofis", async () => {
     const response = await fetch(
-      `https://selenmebelapi20240307024627.azurewebsites.net/api/Furnitures/ByPagination?PageIndex=${furniture_id}`
+      `https://adminserenmebeluz.azurewebsites.net/api/TypeOfFurnitures/${furniture_id}`
     );
     if (!response.ok) {
       throw new Error("Failed to fetch todos");
     }
     return response.json(); // Parse response body as JSON
   });
+  console.log(data)
 
   useEffect(() => {
     window.scrollTo(0, 0);
 
-    console.log(data);
+    if (data && Array.isArray(data.furnitures)) {
+      setTypeArrayAll(data.furnitures);
+      console.log(data.furnitures);
+    } else {
+      console.error('Invalid data format or missing furnitures array');
+    }
+
   }, [furniture_id]);
+
+
   return (
     <div>
       {isLoading ? (
@@ -53,7 +63,7 @@ export default function Ofis() {
           </div>
           <Malumot />
           <RasmlarPastki
-            array_furniture={data}
+            array_furniture={typeArrayAll}
           />
         </div>
       ) : (

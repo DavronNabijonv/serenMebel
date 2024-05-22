@@ -1,0 +1,57 @@
+.not_found {
+  width: 100%;
+  height: 580px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.for_txt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  h1 {
+    font-size: 90px;
+  }
+  .grp_txt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h3 {
+      font-size: 65px;
+    }
+    p {
+      font-size: 28px;
+      font-weight: 600;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .not_found {
+    height: 500px;
+  }
+}
+
+@media (max-width: 375px) {
+  .for_txt {
+    h1 {
+      font-size: 60px;
+    }
+    .grp_txt {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      h3 {
+        font-size: 35px;
+      }
+      p {
+        font-size:20px;
+        font-weight: 600;
+      }
+    }
+  }
+}

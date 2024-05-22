@@ -4,6 +4,7 @@ import Oraliq from "../pages_files/oraliq_page";
 import Info_image from "../pages_files/info_image";
 import Ofis from "../pages_files/all_furniture";
 import Account from "../pages_files/account/account";
+import Not_found from "../pages_files/not_found";
 
 export const routes = [
   {
@@ -36,4 +37,9 @@ export const routes = [
     path: "/account",
     element: <Account/>,
   },
+  {
+    id:7,
+    path:"/*",
+    element:<Not_found/>
+  }
 ];

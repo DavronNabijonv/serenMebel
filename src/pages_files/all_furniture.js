@@ -19,7 +19,9 @@ export default function Ofis() {
   const { furniture_id, typeName } = useParams();
   const [typeArrayAll , setTypeArrayAll] = useState([]);
 
-  const { isLoading, data , error } = useQuery("ofis", async () => {
+  const { isLoading, data
+    
+   } = useQuery("ofis", async () => {
     const response = await fetch(
       `https://adminserenmebeluz.azurewebsites.net/api/TypeOfFurnitures/${furniture_id}`
     );
@@ -47,7 +49,7 @@ export default function Ofis() {
     <div>
       {isLoading ? (
         <Info_load />
-      ) : data ? (
+      ) : (
         <div className={styles.bolalar}>
           <p className={styles.ttl}>{typeName}</p>
           <div className={styles.cnt}>
@@ -66,10 +68,8 @@ export default function Ofis() {
             array_furniture={typeArrayAll}
           />
         </div>
-      ) : (
-        <No_result />
       )}
-      {error&&<No_result/>}
+      
     </div>
   );
 }

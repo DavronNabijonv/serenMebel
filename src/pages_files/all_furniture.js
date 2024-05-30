@@ -1,9 +1,5 @@
 import React, { useEffect, useState } from "react";
 import styles from "./all_furniture.module.scss";
-import b1 from "../assets/images/seren/ofis/image21.webp";
-import b2 from "../assets/images/seren/ofis/image13.jpg";
-import b3 from "../assets/images/seren/ofis/image15.jpg";
-import b4 from "../assets/images/seren/ofis/image12.jpg";
 import { useTranslation } from "react-i18next";
 import { SiAntdesign } from "react-icons/si";
 import { GrTechnology } from "react-icons/gr";
@@ -18,6 +14,7 @@ export default function Ofis() {
   const { t } = useTranslation();
   const { furniture_id, typeName } = useParams();
   const [typeArrayAll , setTypeArrayAll] = useState([]);
+  const [allImg,setAllImg] = useState([]);
 
   const { isLoading, data
     
@@ -42,6 +39,12 @@ export default function Ofis() {
       console.error('Invalid data format or missing furnitures array');
     }
 
+    typeArrayAll.map((r)=>{
+      if(!(allImg.length === 4)){
+        setAllImg(prevImg => [...prevImg,r.image]);
+      }
+    })
+
   }, [furniture_id]);
 
 
@@ -54,19 +57,18 @@ export default function Ofis() {
           <p className={styles.ttl}>{typeName}</p>
           <div className={styles.cnt}>
             <div className={styles.imgs}>
-              <img src={b1} />
-              <img src={b2} />
-              <img src={b3} />
-              <img src={b4} />
+              {allImg.map((f)=>(
+                <img src={`https://adminserenmebeluz.azurewebsites.net/${f}`} alt="MebelImg" />
+              ))}
             </div>
             <div className={styles.bolatxt}>
               <p className={styles.txt}>{t("p4")}</p>
             </div>
           </div>
           <Malumot />
-          <RasmlarPastki
+          {typeArrayAll?<RasmlarPastki
             array_furniture={typeArrayAll}
-          />
+          />:<No_result/>}
         </div>
       )}
       
